@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Text Animation</title>
+</head>
+<body>
+  <div class="text-container">
+    <span id="typing-text"></span>
+  </div>
+
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: inline-block;
+  font-size: 3em;
+}
+
+
+  </style>
+  <script>
+const text = "Are you looking for a designer?";
+const typingTextElement = document.getElementById('typing-text');
+
+let index = 0;
+let isDeleting = false;
+
+function type() {
+  if (!isDeleting && index < text.length) {
+    typingTextElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, 200); // Adjust typing speed here (milliseconds)
+  } else if (isDeleting && index >= 0) {
+    typingTextElement.textContent = text.substring(0, index);
+    index--;
+    setTimeout(type, 100); // Adjust erasing speed here (milliseconds)
+  }
+
+  if (index === text.length) {
+    isDeleting = true;
+  } else if (index === 0) {
+    isDeleting = false;
+  }
+}
+
+type();
+
+
+
+
+  </script>
+</body>
+</html>

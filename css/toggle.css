@@ -1,0 +1,30 @@
+/* darkmode */
+
+[data-theme="dark-mode"] {
+  background-color: #111;
+  color: #fff;
+  }
+
+  [data-theme="dark-mode"] .header {
+  background-color: #111;
+  }
+
+  [data-theme="dark-mode"] .header__profile{
+    background-color: #111;
+  }
+
+  [data-theme="dark-mode"] .header__hamburger {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  }
+
+  [data-theme="dark-mode"] .nav__menu {
+  color: #fff;
+  }
+
+  [data-theme="dark-mode"] .nav__wrapper li:hover{
+  background-color: #222;
+  /*box-shadow: 0 0 0 1px #777 inset;*/
+  }

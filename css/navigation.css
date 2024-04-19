@@ -4,8 +4,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-
 }
 
 .nav__wrapper{
@@ -13,19 +11,17 @@
   min-width: 200px;
   min-height: 100vh;
   /*background-color: #f8f8f8;*/
-  padding: 80px 20px 0 20px;
+  padding: 100px 20px 0 20px;
   list-style: none;
-  position: sticky;
-  top: 0;
 }
 
-.nav__wrapper button {
+.nav__wrapper button{
   margin-right: 0;
 }
 
-.nav__wrapper li {
+.nav__wrapper li{
   display: flex;
-  padding: 8px;
+  padding: 10px 8px;
 }
 
 
@@ -34,14 +30,15 @@
   border-radius: 2px;
 }
 
-.nav__icon {
+.nav__icon{
   height: 36px;
   line-height: 27px;
   border: none;
   background: none;
+  font-size: 1rem;
 }
 
-.nav__menu {
+.nav__menu{
   border: none;
   background: none;
   font-size: 0.8rem;
@@ -61,29 +58,49 @@
   width: var(--nav-width-small);
 }
 
-@media screen and (max-width:1900px) {
-  .nav__wrapper{
-    width: var(--nav-width);
-  }
-}
 
-@media screen and (max-width:1314px){
-  .nav__wrapper{
-    min-width: 0;
-    width: var(--nav-width-small);
-  }
-  
-  .nav__wrapper li {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav__menu{
-    font-size: 0.5rem;
+@media screen and (min-width:791px){
+  .m__slidebar{
+    display: none;
   }
 }
 
 @media screen and (max-width:791px){
-  .nav__wrapper{
-    display: none;
+
+
+    
+  /* 모바일 사이드바 */
+  .wrap {
+    background-color: #fff;
+    transition: left 0.3s ease;
+    overflow-x: auto;
+    overflow-y: auto;
+    flex-direction: column;
+    height: calc(100vh - 100px);
   }
+
+  .nav{position: sticky; top:0;}
+
+  .nav__wrapper {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    width: fit-content; /* 내용에 맞게 너비 조정 */
+    min-width: 100vw;
+    min-height: 50px;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+  }
+
+
+  .wrap > .nav {
+    padding: 0  0 0 10px;
+    background-color: #fff;
+  }
+
+  .nav__wrapper li {
+    padding: 5px 8px;
+}
 }

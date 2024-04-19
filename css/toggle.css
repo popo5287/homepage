@@ -1,28 +1,57 @@
 /* darkmode */
 
 [data-theme="dark-mode"] {
-  background-color: #111;
+  background-color: #333;
   color: #fff;
   }
 
   [data-theme="dark-mode"] .header {
-  background-color: #111;
+  background-color: #333;
   }
 
   [data-theme="dark-mode"] .header__profile{
-    background-color: #111;
+    background-color: #333;
+  }
+
+  [data-theme="dark-mode"] .m__slidebar{
+    background-color: #333;
+  }
+
+  [data-theme="dark-mode"] .nav{
+    background-color: #333;
+  }
+  
+
+  [data-theme="dark-mode"] .thumbs{
+    background-color: #333;
   }
 
   [data-theme="dark-mode"] .header__hamburger {
-  background-color: #111;
+  background-color: #333;
   color: #fff;
-  border: 1px solid #767676;
+  border: 1px solid #606060;
   border-radius: 2px;
   }
 
   [data-theme="dark-mode"] .nav__menu {
   color: #fff;
   }
+
+  
+  [data-theme="dark-mode"] .thumbs__text--des {
+    color: #fff;
+    }  
+
+  [data-theme="dark-mode"] .thumbs__text--title{
+    color: #606060;
+    } 
+
+  [data-theme="dark-mode"] .thumbs__text--day {
+    color: #606060;
+    }  
+
+
+    
 
   [data-theme="dark-mode"] .nav__wrapper li:hover{
   background-color: #222;

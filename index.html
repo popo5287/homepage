@@ -10,14 +10,9 @@
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/reset.css">
 
-  <!-- jQuery 라이브러리 -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- 부트스트랩 JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- 부트스트랩 CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Made Simple, Be Happy</title>
+ 
 
-  <title>반응형 컴포넌트</title>
 </head>
 
 <body data-theme="light-mode row-mode">
@@ -34,6 +29,8 @@
       </div>
     </div>
   </header>
+
+  
   
   <div class="wrap">
     <nav class="nav">
@@ -56,34 +53,31 @@
       </ul>
     </nav><!--nav-->
 
-    <section class="thumbs ">
+    <section class="thumbs">
       <div class="thumbs__wrapper">      
-        <div class="thumbs__item">
-          <a href="#" data-toggle="modal" data-target="#g01">
-              <img src="./imgs/2404_event.jpg" alt="" class="thumbs__thumbnail">
-          </a>
+        <div class="thumbs__item" data-toggle="modal" data-target="#modalContent" >
+          <img src="./imgs/2404_event.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">  
-              <div class="thumbs__text">
-                  <h3 class="thumbs__text--title">프로모션</h3>
-                  <p class="thumbs__text--des">지구를 생각하는 한달, 4월의 특별혜택</p>
-                  <p class="thumbs__text--day">2024.04</p>
-              </div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">지구를 생각하는 한달, 4월의 특별혜택</p>
+              <p class="thumbs__text--day">2024.04</p>
+            </div>
           </div>
         </div>
-        <!-- modal -->
-        <div class="modal fade" id="g01" style="display: none;">
-          <div class="modal-dialog" >
+        <!-- 모달 -->
+        <div class="modal fade" id="modalContent" style="display: none;">
+          <div class="modal-dialog">
               <div class="modal-content">
-                  <div class="modal-header">지구를 생각하는 한달, 4월의 특별혜택 - 프로모션</div>
-                  <div class="modal-body">
-                      <img src="./imgs/amayzl_review_info_mo.png" alt="">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
                   </div>
-                  <div class="modal-footer">
-                      <button class="btn btn-default" data-dismiss="modal">닫기 X</button>
+                  <div class="modal-body" id="modalBody">
                   </div>
               </div>
           </div>
         </div>
+        
         <div class="thumbs__item">
           <img src="./imgs/2404_js_site.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">
@@ -107,6 +101,7 @@
           </div>
         </div>
         <div class="thumbs__item">
+          <a href="link/2403_event.html">
           <img src="./imgs/2403_event_1.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">
             <div class="thumbs__profile"></div>
@@ -116,7 +111,8 @@
               <p class="thumbs__text--day">2024.03</p>
             </div>
           </div>
-        </div>
+          </a>
+          </div>
         <div class="thumbs__item">
           <img src="./imgs/2402_event.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">
@@ -426,7 +422,9 @@
           </div>
         </div>
         <div class="thumbs__item">
-          <img src="./imgs/2209_event_1.jpg" alt="" class="thumbs__thumbnail">
+          <a href="#" data-toggle="modal" data-target="#g01">
+            <img src="./imgs/2209_event_1.jpg" alt="" class="thumbs__thumbnail">
+          </a>
           <div class="thumbs__info">
             <div class="thumbs__profile"></div>
             <div class="thumbs__text">
@@ -435,15 +433,31 @@
               <p class="thumbs__text--day">2022.09</p>
             </div>
           </div>
-        </div> 
+        </div>
+        <!-- modal -->
+        <div class="modal fade" id="g01" style="display: none;">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">지구를 생각하는 한달, 4월의 특별혜택 - 프로모션</div>
+                  <div class="modal-body">
+                      <img src="./imgs/2209_event_1_popup.jpg" alt="">
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-default" data-dismiss="modal">닫기 X</button>
+                  </div>
+              </div>
+          </div>
+        </div>        
       </div><!--thumbs__wrapper-->
     </section><!--section-->
+    
   </div><!--wrap-->
 
   <script src="js/toggle.js"></script>
   <script src="js/ThumbFilter.js"></script>
+  <script src="js/modal.js"></script>
 
-
+  
 
 
 </body>

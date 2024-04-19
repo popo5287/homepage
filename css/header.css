@@ -1,19 +1,17 @@
 .header{
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background-color: #fff;
-  /*box-shadow: 0 0 3px #555;*/
-  z-index: 20;
+  z-index: 10;
+  height: 100px;
+  position: relative;
 }
 
 .header__wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  padding:0 30px;
+  height: 100px;
+  padding:0 20px;
 }
 
 .header__start{
@@ -22,24 +20,41 @@
 }
 
 .header__hamburger {
+  font-family: 'Noto Sans KR', "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   width: 34px;
   height: 34px;
-  line-height: 27px;
+  /* line-height: 27px; */
   text-align: center;
   font-size: 1rem;
-  border: 1px solid #767676;
+  border: 1px solid #606060;
   background-color: #efefef;
   border-radius: 2px;
 }
 
+
+.header__hamburger__tab {
+  display: none;
+  font-family: 'Noto Sans KR', "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 34px;
+  height: 34px;
+  /* line-height: 27px; */
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #606060;
+  background-color: #efefef;
+  border-radius: 2px;
+}
+
+
 .header__center{
-  width: 50%;
+  font-family: 'Noto Sans KR', "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   text-align: center;
 }
 
 .header__title {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-family: 'Noto Sans KR', "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 
@@ -48,18 +63,22 @@
 }
 
 .header__profile {
+  font-family: 'Noto Sans KR', "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   width: 34px;
   height: 34px;
   border: 1px solid #767676;
   border-radius: 2px;
   background-color: #efefef;
-  line-height: 31px;
+  /* line-height: 31px; */
   text-align: center;
 }
 
 
-@media screen and (max-width:400px){
-  .header__center{
+
+@media screen and (max-width:791px){
+  .header__start{
     display: none;
   }
+
+  .header__center{text-align: left;}
 }

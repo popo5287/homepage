@@ -1,0 +1,458 @@
+<style>
+	body {font-family: "pretendard", sans-serif;}
+  .sub_content h1 {text-align: center; font-weight: 900; font-size: 8.5vw; padding-top: 3em; line-height: 10vw; word-spacing:-0.5vw; color:#333;}
+  .sub_content h2 {text-align: center; font-weight: 800; font-size: 7vw; padding-top: 1.5em; color: #2CA54F; line-height: 1;}
+	.sub_content h2 p {text-align: center; font-weight: 300; font-size: 5vw;  padding-top: 0.5em; color: #2CA54F;}
+  .sub_content p {text-align: center; font-weight: 300; font-size: 5vw;  padding-top: 0.7em; line-height: 5.5vw; color:#333;}
+  .prd_tit{display:none;}
+  #content1{background-color:#FAF9F7;}
+  #test01, #test02, #test03 { padding-top: 1em; font-size: 5vw; font-weight: 300;}
+  .countdown-number {font-size: 5vw; border:1px solid #2CA54F; border-radius: 3px; padding: 0.3em 0.6em; line-height:3em; /* 숫자에 대한 스타일 */}
+  .countdown-text { font-size: 4vw; /* 글자에 대한 스타일 */}
+  .event-ended { font-size: 5vw; padding:3em 0em; }
+  .goods_list_cont {padding-top: 3em;}
+	.timesale_bg { background-image: url('https://yanolja001.godohosting.com/pair/promotion/2403/timesale_bg.png'); background-size: cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+  .coming_soon_bg { background-image: url('https://yanolja001.godohosting.com/pair/promotion/2403/coming_soon_bg.png'); background-size: cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+  .main_tit{display:none;}
+	._goods_display_main .main_prd_list {padding: 4vw 5px 0 5px;}
+	.goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.fixed_price{display:none;}
+	.goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.price {display:none;}
+	.goods_content37g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.fixed_price{display:block;}
+	.goods_content37g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.price {display:block;}
+	.goods_prd_item2.list_num_2{margin-bottom:0px;}
+	.main_img_wrap{width:100%;}
+	.main_img_wrap img { width: 100%; display: block; font-size: 0;}
+	.box_wrap {margin: 0 auto; position: relative;}
+	.tab_wrap { width: 100%; overflow: hidden; position: relative;}
+	.tab_wrap .tab_bg {  width: 100%;  background-color: #212121;  position: sticky;  top: 0;  z-index: 99;}
+	.tab_wrap .tab_bg .tab {  margin: 0 auto; display: flex;  height: 7em;  line-height: 7em; align-items:center;}
+	.tab_wrap .tab_bg .tab li {  flex: 1;  font-size: 1.5em;  font-weight: 300;  text-align: center;  cursor: pointer; height:100%;}
+	.tab_wrap .tab_bg .tab li a { color: #d1d1d1; display:block; line-height:1.3em; padding-top:1em;}
+	.tab_wrap .tab_bg .tab .on {  background-color: #2ca54f;  font-weight: 700;}
+	.tab_wrap .tab_bg .tab .on a {  color: #fff;}
+	#content1,#content2,#content3 {  position: relative;  z-index: 1;}
+	ol,li,a {  list-style: none;  text-decoration: none;}
+	#content2 img{width:100%;}
+	.notice img{width:100%;}
+	.goods_prd_item2.list_num_2 .goods_prd_item2_box { background: #fff; border: 1px solid #ebebeb;}	
+</style>
+
+
+<div class="mro_header">
+  <img src="../imgs/mro_header_m.jpg" alt="mro_pc_header">
+</div>
+
+
+<div class="main_img_wrap">
+	<img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_mainbanner_m.jpg">
+</div>
+
+<div id="content1" class="tab_wrap" data-tabslet-content="tab01">
+    <div class="tab_bg" id="tab_wrap1">
+        <ul class="tab map">
+            <li class="on"><a href="#tab01" data-tabslet="tab01">브랜드<br>한정특가</a></li>  
+            <li><a href="#tab02" data-tabslet="tab02">할인쿠폰<br>챙기기</a></li>  
+            <li><a href="#tab03" data-tabslet="tab03">한정수량<br>쇼핑찬스</a></li>  
+        </ul>
+    </div>
+    <div class="box_wrap">
+		<div class="box" id="content1" data-tabslet-content="tab01"></div>
+			<div class="sub_content">
+				<h1>봄맞이 통합발주센터<br>브랜드 WEEK</h1>
+				<p>매주 인기 시리즈 상품을<br>초특가에 만나보세요!</p>
+
+				<h2>어메이즐 WEEK<br><p>(3.1 ~ 3.10)</p></h2>
+				<h2 id="test01"></h2>
+				<div class="bcdlist">
+				  {=includeWidget('goods/_goods_display_main.html','sno','66')}
+				</div>
+
+				<h2>위드모먼트 WEEK<br><p>(3.11 ~ 3.20)</p></h2>
+				<h2 id="test02"></h2>
+				<div class="bcdlist">
+				  {=includeWidget('goods/_goods_display_main.html','sno','67')}
+				</div>
+
+				<h2>에코메니티 WEEK<br><p>(3.21 ~ 3.31)</p></h2>
+				<h2 id="test03"></h2>
+				<div class="bcdlist">
+				  {=includeWidget('goods/_goods_display_main.html','sno','68')}
+				</div>
+			</div>
+			<div class="notice">
+				<img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_brandweek_notice_mo.png">
+			</div>
+			<br/>
+		</div>
+	</div>
+	<div id="content2" class="tab_wrap" data-tabslet-content="tab02">
+		<div class="tab_bg" id="tab_wrap2">
+			<ul class="tab map">
+				<li><a href="#tab01" data-tabslet="tab01">브랜드<br>한정특가</a></li>  
+				<li class="on"><a href="#tab02" data-tabslet="tab02">할인쿠폰<br>챙기기</a></li>  
+				<li><a href="#tab03" data-tabslet="tab03">한정수량<br>쇼핑찬스</a></li>  
+			</ul>
+		</div>
+		<div class="box"></div>
+		<img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_coupon_m.png" usemap="#image-map">
+
+		<map name="image-map">
+			<area target="" alt="" title="" href="javascript:couponLinkDown('641');" coords="55,640,1040,1163" shape="rect">
+			<area target="" alt="" title="" href="javascript:couponLinkDown('642');" coords="44,1234,1040,1851" shape="rect">
+			<area target="" alt="" title="" href="javascript:couponLinkDown('643');" coords="47,1925,1037,2494" shape="rect">
+		</map>
+	</div>
+	<div id="content3" class="tab_wrap" data-tabslet-content="tab03">
+		<div class="tab_bg" id="tab_wrap3">
+			<ul class="tab map">
+				<li><a href="#tab01" data-tabslet="tab01">브랜드<br>한정특가</a></li>  
+				<li><a href="#tab02" data-tabslet="tab02">할인쿠폰<br>챙기기</a></li>  
+				<li class="on"><a href="#tab03" data-tabslet="tab03">한정수량<br>쇼핑찬스</a></li>  
+			</ul>
+		</div>
+		<div class="box"></div>
+		<img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_chance_m.png" style="width:100%">
+		<div class="bcdlist">
+		{=includeWidget('goods/_goods_display_main.html','sno','37')}
+		</div>
+	</div>
+
+  <div class="mro_footer">
+    <img src="../imgs/mro_footer_m.jpg" alt="mro_pc_fotter">
+  </div>  
+
+
+
+<script>
+var currentDate;
+
+document.addEventListener('DOMContentLoaded', function() {
+    // currentDate 변수를 현재 날짜로 초기화합니다.
+    currentDate = new Date();
+
+    // 어메이즐 WEEK의 시작일과 종료일 설정
+    var amayZlWeekStartDate = new Date('2024-02-25T00:00:00');
+    var amayZlWeekEndDate = new Date('2024-03-10T23:59:59');
+    // 어메이즐 WEEK 이벤트 설정 함수 호출
+    setupAmayZlWeek(amayZlWeekStartDate, amayZlWeekEndDate);
+
+    // 위드모먼트 WEEK의 시작일과 종료일 설정
+    var withMomentWeekStartDate = new Date('2024-03-11T00:00:00');
+    var withMomentWeekEndDate = new Date('2024-03-20T23:59:59');
+    // 위드모먼트 WEEK 이벤트 설정 함수 호출
+    setupWithMomentWeek(withMomentWeekStartDate, withMomentWeekEndDate);
+
+    // 에코메니티 WEEK의 시작일과 종료일 설정
+    var ecoMenityWeekStartDate = new Date('2024-03-21T00:00:00');
+    var ecoMenityWeekEndDate = new Date('2024-03-31T23:59:59');
+    // 에코메니티 WEEK 이벤트 설정 함수 호출
+    setupEcoMenityWeek(ecoMenityWeekStartDate, ecoMenityWeekEndDate);
+	
+
+
+});
+	
+	
+	
+// 어메이즐 WEEK 이벤트에 대한 타이머와 스타일 설정 함수
+function setupAmayZlWeek(startDate, endDate) {
+    if (currentDate >= startDate && currentDate < endDate) {
+        // 이벤트 기간 스타일 적용
+        document.querySelectorAll('.goods_content66g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.fixed_price').forEach(function(element) {
+            element.style.display = 'block';
+        });
+
+        document.querySelectorAll('.goods_content66g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.price').forEach(function(element) {
+            element.style.display = 'block';
+        });		
+
+        // 타이머 설정 함수 호출
+        countDownTimer('test01', endDate);
+        
+    } else if (currentDate < startDate) {
+		// 이벤트 기간이 시작되기 전 문구 표시
+        document.getElementById('test01').textContent = 'Coming soon!';
+		
+        // 이벤트 기간이 시작되기 전에 배경 이미지가 표시될 새로운 div 요소 생성
+        var bgDiv = document.createElement('div');
+        bgDiv.classList.add('coming_soon_bg');
+
+        // 모든 요소에 배경 이미지 추가
+        document.querySelectorAll('.goods_content66g .goods_prd_item2 .goods_prd_img .img_box').forEach(function(element) {
+            var clonedBgDiv = bgDiv.cloneNode(true); // 배경 이미지를 추가할 요소의 복제본 생성
+            element.appendChild(clonedBgDiv); // 복제본 요소를 실제 요소에 추가
+        });
+        
+		document.querySelectorAll('.js_main_wrap_66_ .btn_box').forEach(function(element) {
+            element.style.display = 'none';
+        });
+		
+    } else {
+        // 이벤트 종료 문구 표시
+        document.getElementById('test01').textContent = '해당 이벤트가 종료 되었습니다!';
+		
+		// 이벤트 종료 시 배경 이미지가 표시될 새로운 div 요소 생성
+        var bgDiv = document.createElement('div');
+        bgDiv.classList.add('timesale_bg');
+		
+		// 모든 요소에 배경 이미지 추가
+        document.querySelectorAll('.goods_content66g .goods_prd_item2 .goods_prd_img .img_box').forEach(function(element) {
+        var clonedBgDiv = bgDiv.cloneNode(true); // 배경 이미지를 추가할 요소의 복제본 생성
+        element.appendChild(clonedBgDiv); // 복제본 요소를 실제 요소에 추가
+        });
+		
+		document.querySelectorAll('.js_main_wrap_66_ .btn_box').forEach(function(element) {
+        element.style.display = 'none';
+        });
+
+    }
+}
+    
+// 위드모먼트 WEEK 이벤트에 대한 타이머와 스타일 설정 함수
+function setupWithMomentWeek(startDate, endDate) {
+    if (currentDate >= startDate && currentDate < endDate) {
+        // 이벤트 기간 스타일 적용
+        document.querySelectorAll('.goods_content67g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.fixed_price').forEach(function(element) {
+            element.style.display = 'block';
+        });
+
+        document.querySelectorAll('.goods_content67g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.price').forEach(function(element) {
+            element.style.display = 'block';
+        });		
+
+
+        // 타이머 설정 함수 호출
+        countDownTimer('test02', endDate);
+        
+    } else if (currentDate < startDate) {
+        // 이벤트 기간이 시작되기 전 문구 표시
+        document.getElementById('test02').textContent = 'Coming soon!';
+		
+        // 이벤트 기간이 시작되기 전에 배경 이미지가 표시될 새로운 div 요소 생성
+        var bgDiv = document.createElement('div');
+        bgDiv.classList.add('coming_soon_bg');
+
+        // 모든 요소에 배경 이미지 추가
+        document.querySelectorAll('.goods_content67g .goods_prd_item2 .goods_prd_img .img_box').forEach(function(element) {
+        var clonedBgDiv = bgDiv.cloneNode(true); // 배경 이미지를 추가할 요소의 복제본 생성
+        element.appendChild(clonedBgDiv); // 복제본 요소를 실제 요소에 추가
+		});			
+			
+			
+		document.querySelectorAll('.js_main_wrap_67_ .btn_box').forEach(function(element) {
+        element.style.display = 'none';
+
+        });
+        
+    } else {
+         // 이벤트 종료 문구 표시
+        document.getElementById('test02').textContent = '해당 이벤트가 종료 되었습니다!';
+		
+		// 이벤트 종료 시 배경 이미지가 표시될 새로운 div 요소 생성
+        var bgDiv = document.createElement('div');
+        bgDiv.classList.add('timesale_bg');
+		
+		// 모든 요소에 배경 이미지 추가
+        document.querySelectorAll('.goods_content67g .goods_prd_item2 .goods_prd_img .img_box').forEach(function(element) {
+            var clonedBgDiv = bgDiv.cloneNode(true); // 배경 이미지를 추가할 요소의 복제본 생성
+            element.appendChild(clonedBgDiv); // 복제본 요소를 실제 요소에 추가		
+		});
+		
+		document.querySelectorAll('.js_main_wrap_67_ .btn_box').forEach(function(element) {
+        element.style.display = 'none';
+        });
+    }
+}   
+
+// 에코메니티 WEEK 이벤트에 대한 타이머와 스타일 설정 함수    
+function setupEcoMenityWeek(startDate, endDate) {
+    if (currentDate >= startDate && currentDate < endDate) {
+        // 이벤트 기간 스타일 적용
+        document.querySelectorAll('.goods_content68g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.fixed_price').forEach(function(element) {
+            element.style.display = 'block';
+        });
+
+        document.querySelectorAll('.goods_content68g .goods_prd_item2.list_num_2 .goods_prd_item2_box .goods_prd_content .goods_info_list li.price').forEach(function(element) {
+            element.style.display = 'block';
+        });	
+
+        // 타이머 설정 함수 호출
+        countDownTimer('test03', endDate);
+		
+    } else if (currentDate < startDate) {
+        // 이벤트 기간이 시작되기 전 문구 표시
+        document.getElementById('test03').textContent = 'Coming soon!';
+		
+        // 이벤트 기간이 시작되기 전에 배경 이미지가 표시될 새로운 div 요소 생성
+        var bgDiv = document.createElement('div');
+        bgDiv.classList.add('coming_soon_bg');
+
+        // 모든 요소에 배경 이미지 추가
+        document.querySelectorAll('.goods_content68g .goods_prd_item2 .goods_prd_img .img_box').forEach(function(element) {
+            var clonedBgDiv = bgDiv.cloneNode(true); // 배경 이미지를 추가할 요소의 복제본 생성
+            element.appendChild(clonedBgDiv); // 복제본 요소를 실제 요소에 추가
+		});
+		
+		document.querySelectorAll('.js_main_wrap_68_ .btn_box').forEach(function(element) {
+        element.style.display = 'none';
+        });
+
+    } else {
+         // 이벤트 종료 문구 표시
+        document.getElementById('test03').textContent = '해당 이벤트가 종료 되었습니다!';
+		
+		// 이벤트 종료 시 배경 이미지가 표시될 새로운 div 요소 생성
+        var bgDiv = document.createElement('div');
+        bgDiv.classList.add('timesale_bg');
+		
+		// 모든 요소에 배경 이미지 추가
+        document.querySelectorAll('.goods_content68g .goods_prd_item2 .goods_prd_img .img_box').forEach(function(element) {
+            var clonedBgDiv = bgDiv.cloneNode(true); // 배경 이미지를 추가할 요소의 복제본 생성
+            element.appendChild(clonedBgDiv); // 복제본 요소를 실제 요소에 추가
+		});
+		
+		document.querySelectorAll('.js_main_wrap_68_ .btn_box').forEach(function(element) {
+        element.style.display = 'none';
+        });
+    }
+}
+
+
+
+
+// 타이머 함수
+function countDownTimer(id, endDate, targetElement) {
+    var _vDate = new Date(endDate);
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distDt = _vDate - now;
+        if (distDt <= 0) {
+            clearInterval(timer);
+			document.getElementById(id).textContent = '해당 이벤트가 종료 되었습니다!';
+            return;
+        }
+
+        var days = Math.floor(distDt / _day);
+        var hours = Math.floor((distDt % _day) / _hour);
+        var minutes = Math.floor((distDt % _hour) / _minute);
+        var seconds = Math.floor((distDt % _minute) / _second);
+
+        document.getElementById(id).style.display = 'block';
+        document.getElementById(id).innerHTML = '<span class="countdown-number">' + days + '</span>' + '<span class="countdown-text"> 일 : </span>';
+        document.getElementById(id).innerHTML += '<span class="countdown-number">' + hours + '</span>' + '<span class="countdown-text"> 시간 : </span>';
+        document.getElementById(id).innerHTML += '<span class="countdown-number">' + minutes + '</span>' + '<span class="countdown-text"> 분 : </span>';
+        document.getElementById(id).innerHTML += '<span class="countdown-number">' + seconds + '</span>' + '<span class="countdown-text"> 초</span>';
+    }
+
+    showRemaining();
+    timer = setInterval(showRemaining, 1000);
+}
+	
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // 탭 클릭 시 해당 탭의 위치로 스크롤
+    $('.tab_wrap .tab_bg .tab li a').on('click', function(e) {
+        e.preventDefault();
+        console.log("Tab clicked!");
+        
+        // 클릭한 탭에 대응하는 컨텐츠의 위치로 스크롤
+        var targetId = $(this).data('tabslet');
+        var targetContent = $('[data-tabslet-content="' + targetId + '"]');
+        $('html, body').animate({
+            scrollTop: targetContent.offset().top
+        }, 500);
+    });
+});
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+<script>
+(function($) {
+    $(document).ready(function(e){
+        initRwdImageMaps();
+    });
+
+    function initRwdImageMaps() {
+        $('img[usemap]').rwdImageMaps();
+    }
+})(jQuery);
+</script>
+
+<script type="text/javascript">
+    <!--
+    $(document).ready(function() {
+        $('.js_main_wrap_66_ .btn_main_bottom_more').on('click', function(e){
+            gd_get_list_66($(this).data('page'));
+        });
+    });
+
+    function gd_get_list_66(page) {
+
+        $.get('..goods/_goods_display_main.php', {'mode' : 'get_main', 'more' : page, 'sno' : '66', 'groupSno' : ''}, function (data) {
+            $(".goods_content66g").html(data);
+            if (parseInt(page) + 1 > 3) {
+                $('.js_main_wrap_66_ .btn_main_bottom_more').hide();
+            } else {
+                $('.js_main_wrap_66_ .btn_main_bottom_more').data('page', parseInt(page) + 1);
+            }
+        });
+    }
+    //-->
+</script>
+
+<script type="text/javascript">
+    <!--
+    $(document).ready(function() {
+        $('.js_main_wrap_67_ .btn_main_bottom_more').on('click', function(e){
+            gd_get_list_67($(this).data('page'));
+        });
+    });
+
+    function gd_get_list_67(page) {
+
+        $.get('..goods/_goods_display_main.php', {'mode' : 'get_main', 'more' : page, 'sno' : '67', 'groupSno' : ''}, function (data) {
+            $(".goods_content67g").html(data);
+            if (parseInt(page) + 1 > 3) {
+                $('.js_main_wrap_67_ .btn_main_bottom_more').hide();
+            } else {
+                $('.js_main_wrap_67_ .btn_main_bottom_more').data('page', parseInt(page) + 1);
+            }
+        });
+    }
+    //-->
+</script>
+
+<script type="text/javascript">
+    <!--
+    $(document).ready(function() {
+        $('.js_main_wrap_68_ .btn_main_bottom_more').on('click', function(e){
+            gd_get_list_68($(this).data('page'));
+        });
+    });
+
+    function gd_get_list_68(page) {
+
+        $.get('goods/_goods_display_main.php', {'mode' : 'get_main', 'more' : page, 'sno' : '68', 'groupSno' : ''}, function (data) {
+            $(".goods_content68g").html(data);
+            if (parseInt(page) + 1 > 2) {
+                $('.js_main_wrap_68_ .btn_main_bottom_more').hide();
+            } else {
+                $('.js_main_wrap_68_ .btn_main_bottom_more').data('page', parseInt(page) + 1);
+            }
+        });
+    }
+    //-->
+</script>
+
+

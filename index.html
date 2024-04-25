@@ -52,9 +52,12 @@
     </nav><!--nav-->
 
     <section class="thumbs">
-      <div class="thumbs__wrapper">      
-        <div class="thumbs__item" data-toggle="modal" data-target="#2404Event" >
-          <img src="./imgs/2404_event.jpg" alt="" class="thumbs__thumbnail">
+      <div class="thumbs__wrapper"> 
+
+        <div class="thumbs__item">
+          <a href="https://popo5287.github.io/homepage/link/2404_event.html" 
+     data-href-mobile="https://popo5287.github.io/homepage/link/2404_event_m.html">
+            <img src="./imgs/2404_event.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">  
             <div class="thumbs__text">
               <h3 class="thumbs__text--title">프로모션</h3>
@@ -62,46 +65,25 @@
               <p class="thumbs__text--day">2024.04</p>
             </div>
           </div>
-        </div>
-        <!-- 모달 -->
-        <div class="modal fade" id="2404Event" style="display: none;">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">지구를 생각하는 한달, 4월의 특별혜택
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-                  <div class="modal-body" id="modalBody">
-                  </div>
-              </div>
-          </div>
+          </a>
         </div>
         
-        <div class="thumbs__item" data-toggle="modal" data-target="#2403Event">
+        <div class="thumbs__item">
+          <a href="https://beststaylab.cafe24.com/skin-skin3">
           <img src="./imgs/2404_js_site.jpg" alt="" class="thumbs__thumbnail">
-          <div class="thumbs__info">
-            <div class="thumbs__profile"></div>
+          <div class="thumbs__info">  
             <div class="thumbs__text">
               <h3 class="thumbs__text--title">UI DESIGN</h3>
-              <p class="thumbs__text--des">좋은 숙박연구소 반응형 사이트</p>
-              <p class="thumbs__text--day">2024.04</p>
+              <p class="thumbs__text--des">좋은숙박연구소 반응형 사이트</p>
+              <p class="thumbs__text--day">2024.03</p>
             </div>
           </div>
-        </div>
-        
-        <!-- 모달 -->
-        <div class="modal fade" id="2403Event" style="display: none;">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">좋은 숙박연구소 반응형 사이트
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-                  <div class="modal-body" id="modalBody">
-                  </div>
-              </div>
-          </div>
+          </a>
         </div>
 
         <div class="thumbs__item">
+          <a href="https://popo5287.github.io/homepage/link/2403_event_2.html" 
+     data-href-mobile="https://popo5287.github.io/homepage/link/2403_event_2_m.html">
           <img src="./imgs/2403_event_2.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">
             <div class="thumbs__profile"></div>
@@ -111,9 +93,10 @@
               <p class="thumbs__text--day">2024.03</p>
             </div>
           </div>
+        </a>
         </div>
-        <div class="thumbs__item">
-          <a href="link/2403_event.html">
+        
+        <div class="thumbs__item" data-toggle="modal" data-target="#modalContent2">
           <img src="./imgs/2403_event_1.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">
             <div class="thumbs__profile"></div>
@@ -123,8 +106,21 @@
               <p class="thumbs__text--day">2024.03</p>
             </div>
           </div>
-          </a>
+        </div>
+        <!-- 모달 -->
+        <div class="modal fade" id="modalContent2" style="display: none;">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header"><p>프로모션</p><span>2024.03</span>
+                  </div>
+                  <div class="modal-body" id="modalBody2" data-src="https://popo5287.github.io/homepage/link/2403_event.html">
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal">닫기 X</button>
+                  <div style="clear: both;"></div>
+              </div>
           </div>
+        </div>
+
         <div class="thumbs__item">
           <img src="./imgs/2402_event.jpg" alt="" class="thumbs__thumbnail">
           <div class="thumbs__info">
@@ -468,6 +464,7 @@
   <script src="js/toggle.js"></script>
   <script src="js/ThumbFilter.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/device.js"></script>
 
   
 

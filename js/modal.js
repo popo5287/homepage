@@ -17,29 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
   function loadModalContent(modal) {
     var modalBody = modal.querySelector('.modal-body');
     if (modalBody) {
-      var modalId = modal.getAttribute('id'); // Get modal ID
-      var index = modalId.replace('modalContent', ''); // Extract index from modal ID
-      var type = getTypeFromModalId(modalId); // Extract type from modal ID
-      fetch(`../link/${type}_${index}.html`) // Construct link format using type and index
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('네트워크 오류: ' + response.status);
-          }
-          return response.text();
-        })
-        .then(data => {
-          modalBody.innerHTML = data;
-        })
-        .catch(error => {
-          console.error('모달 내용을 가져오는 동안 오류가 발생했습니다.', error);
-        });
+      var modalSrc = modalBody.getAttribute('data-src'); // Get modal source link
+      if (modalSrc) {
+        fetch(modalSrc)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('네트워크 오류: ' + response.status);
+            }
+            return response.text();
+          })
+          .then(data => {
+            modalBody.innerHTML = data;
+          })
+          .catch(error => {
+            console.error('모달 내용을 가져오는 동안 오류가 발생했습니다.', error);
+          });
+      }
     }
-  }
-
-  // Function to extract type from modal ID
-  function getTypeFromModalId(modalId) {
-    var type = modalId.split('_')[0];
-    return type.replace('modalContent', '');
   }
 
   var modalCloseButtons = document.querySelectorAll('[data-dismiss="modal"]');

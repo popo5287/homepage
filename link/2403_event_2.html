@@ -1,0 +1,221 @@
+
+<!--웹 폰트 -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'chk7zur',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+<style>
+  *{margin: 0; padding: 0;}
+	body {font-family: "pretendard", sans-serif;}
+	.title {width: 100%; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+	.title > h3{font-size: 40px; font-weight: 100; line-height:50px; text-align:center; padding-bottom:16px;}	
+	.title > h4{font-size: 18px; font-weight: 200; line-height:18px; text-align:center;}
+	.main_img_wrap{width:100%;}
+	.main_img_wrap img { width: 100%;}
+  .sub_content{text-align: center; width:100%; padding:0px;}
+  .sub_content h1 {font-weight: 800; font-size: 45px; padding-top: 140px;}
+  .sub_content h2 {font-weight: 800; font-size: 35px; padding-top: 70px; color:#2CA54F;}
+  .sub_content p{font-weight:300; font-size:30px;}
+  .prd_tit{display:none;}
+  #contents{background-color:#FAF9F7;}
+  #test01, #test02, #test03, #timerDisplay {padding: 10px 0px 0px;font-weight: 300; font-size: 26px; color: #2CA54F;} 
+  .countdown-number {font-size: 35px; color: #2CA54F; margin-right: 5px;  padding: 5px; border: 1px solid #2CA54F;   border-radius: 3px; display: inline-block;}
+  .countdown-text { font-size: 26px; color: #2CA54F; /* 글자에 대한 스타일 */}
+  .event-ended { font-size: 24px; padding:10px 0px; }
+  .goods_list_cont {padding-top: 50px;}
+	.timesale_bg { background-image: url('https://yanolja001.godohosting.com/pair/promotion/2403/timesale_bg.png'); background-size: cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+	.coming_soon_bg { background-image: url('https://yanolja001.godohosting.com/pair/promotion/2403/coming_soon_bg.png'); background-size: cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+  .item_money_box{display:none;}
+  #scroll_right{display:none;}
+	.main_wrap_65{padding-bottom:110px;}
+	.goods_content_36{width: 1100px; margin: 0 auto;}
+	.main_wrap_36{background-color:#fff;}
+	.main_wrap_36 .goods_list_cont{padding-top:0;}
+	.main_wrap_36 .item_money_box{display:block;}
+	.main_wrap_65 .item_money_box{display:block;}
+	.box_wrap {margin: 0 auto; position: relative; background: #faf9f7;}
+	.tab_wrap { width: 100%; overflow: hidden; position: relative;}
+	.tab_wrap .tab_bg {  width: 100%;  background-color: #212121;  position: sticky;  top: 0;  z-index: 99;}
+	.tab_wrap .tab_bg .tab {  margin: 0 auto;  max-width: 1101px;  display: flex;  height: 76px;  line-height: 76px;}
+	.tab_wrap .tab_bg .tab li {  flex: 1;  font-size: 25px;  font-weight: 300;  text-align: center;  cursor: pointer;}
+	.tab_wrap .tab_bg .tab li a {  color: #d1d1d1;}
+	.tab_wrap .tab_bg .tab .on {  background-color: #2ca54f;  font-weight: 700;}
+	.tab_wrap .tab_bg .tab .on a {  color: #fff;}
+	#content1,#content2,#content3 {  position: relative;  z-index: 1;}
+	ol,li,a {  list-style: none;  text-decoration: none;}
+</style>
+
+  
+<div class="mro_header">
+  <img src="../imgs/mro_header.jpg" alt="mro_pc_header">
+</div>
+
+<div class="title">
+	<h3>EVENT</h3>
+	<h4>봄이라서 더 할인해 봄, 혜택도 더 드려 봄</h4>
+</div>
+<div class="main_img_wrap">
+	<img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_mainbanner.jpg">
+</div>
+
+<div id="content1" class="tab_wrap sub_content" data-tabslet-content="tab01">
+    <div class="tab_bg" id="tab_wrap1">
+        <ul class="tab map">
+            <li class="on"><a href="#tab01" data-tabslet="tab01">브랜드 한정특가</a></li>  
+            <li><a href="#tab02" data-tabslet="tab02">할인쿠폰 챙기기</a></li>  
+            <li><a href="#tab03" data-tabslet="tab03">한정수량 쇼핑찬스</a></li>  
+        </ul>
+    </div>
+    <div class="box_wrap">
+		<div class="box" id="content1" data-tabslet-content="tab01"></div>
+		<h1>봄맞이 통합발주센터 브랜드 WEEK</h1>
+		<p>매주 인기 시리즈 상품을 초특가에 만나보세요!</p>
+
+		<h2>어메이즐 WEEK (3.1 ~ 3.10)</h2>
+		<h2 id="test01">해당 이벤트가 종료 되었습니다!</h2>
+  
+    <div>
+      <img src="../imgs/2403_event_2_product_1.jpg" alt="amazl">
+    </div> 
+
+		<h2>위드모먼트 WEEK (3.11 ~ 3.20)</h2>
+		<h2 id="test02"></h2>
+    <div id="timerDisplay">
+      <span class="countdown-number days">00</span>일
+      <span class="countdown-number hours">00</span>시간
+      <span class="countdown-number minutes">01</span>분
+      <span class="countdown-number seconds">00</span>초
+    </div>
+    <div>
+      <img src="../imgs/2403_event_2_product_2.jpg" alt="withmoment">
+    </div> 
+
+		<h2>에코메니티 WEEK (3.21 ~ 3.31)</h2>
+		<h2 id="test03"></h2>
+    <div>
+      <img src="../imgs/2403_event_2_product_3.jpg" alt="ecomenity">
+    </div> 
+
+		<div class="notice">
+			<img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_brandweek_notice.png">
+		</div>
+		<br/>
+	</div>
+</div>
+
+<div id="content2" class="tab_wrap" data-tabslet-content="tab02">
+    <div class="tab_bg" id="tab_wrap2">
+        <ul class="tab map">
+            <li><a href="#tab01" data-tabslet="tab01">브랜드 한정특가</a></li>  
+            <li class="on"><a href="#tab02" data-tabslet="tab02">할인쿠폰 챙기기</a></li>  
+            <li><a href="#tab03" data-tabslet="tab03">한정수량 쇼핑찬스</a></li>  
+        </ul>
+    </div>
+    <div class="box"></div>
+	<img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_coupon.png" usemap="#image-map">
+
+	<map name="image-map">
+		<area target="" alt="" title="" href="javascript:couponLinkDown('641');" coords="655,283,1267,583" shape="rect">
+		<area target="" alt="" title="" href="javascript:couponLinkDown('642');" coords="365,616,946,919" shape="0">
+		<area target="" alt="" title="" href="javascript:couponLinkDown('643');" coords="979,614,1545,924" shape="0">
+	</map>
+
+</div>
+
+<div id="content3" class="tab_wrap" data-tabslet-content="tab03">
+    <div class="tab_bg" id="tab_wrap3">
+        <ul class="tab map">
+            <li><a href="#tab01" data-tabslet="tab01">브랜드 한정특가</a></li>  
+            <li><a href="#tab02" data-tabslet="tab02">할인쿠폰 챙기기</a></li>  
+            <li class="on"><a href="#tab03" data-tabslet="tab03">한정수량 쇼핑찬스</a></li>  
+        </ul>
+    </div>
+    <div class="box"></div>
+    <img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_springevent_chance.png">
+    <div>
+      <img src="../imgs/product_2.jpg" alt="product_2">
+    </div> 
+</div>
+
+<div class="mro_footer">
+  <img src="../imgs/mro_footer.jpg" alt="mro_footer">
+</div> 
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var timerDisplay = document.getElementById('timerDisplay');
+    var totalSeconds = 60;  // 1분은 60초입니다.
+    var imageElement = document.querySelector('img[alt="withmoment"]'); // 이미지 요소 선택
+
+    function updateTimer() {
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+
+        // 각 타임 유닛 업데이트
+        timerDisplay.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
+        timerDisplay.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
+
+        totalSeconds -= 1; // 매 호출마다 초 단위를 감소시킵니다.
+
+        if (totalSeconds < 0) {
+            clearInterval(timerInterval);
+            timerDisplay.textContent = "해당 이벤트가 종료 되었습니다!";
+            // 이미지 변경
+            if (imageElement) {
+                imageElement.src = "../imgs/2403_event_2_product_2_end.jpg";
+            }
+        }
+    }
+
+    // 1초마다 타이머를 업데이트 합니다.
+    var timerInterval = setInterval(updateTimer, 1000);
+});
+
+
+
+</script>
+
+<script>
+$(document).ready(function() {
+    $('.tab_wrap .tab_bg .tab li a').on('click', function(e) {
+        e.preventDefault();
+        console.log("Tab clicked!");
+    });
+});
+</script>
+
+<script>
+$(window).on('scroll', function() {
+    console.log("Page scrolled!");
+});
+</script>
+
+<script type="text/javascript">
+    <!--
+    $(document).ready(function() {
+        $('.main_wrap_63 .btn_goods_view_down_more').on('click', function(e){
+            gd_get_list_63($(this).data('page'));
+        });
+    });
+
+    function gd_get_list_63(page) {
+
+        $.get('../goods/goods_main.php', {'mode' : 'get_main', 'more' : page, 'sno' : '63', 'groupSno' : ''}, function (data) {
+            $(".goods_content_63").html(data);
+            if (parseInt(page) + 1 > 3) {
+                $('.main_wrap_63 .btn_goods_view_down_more').hide();
+            } else {
+                $('.main_wrap_63 .btn_goods_view_down_more').data('page', parseInt(page) + 1);
+            }
+        });
+    }
+    //-->
+</script>

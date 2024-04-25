@@ -3,40 +3,478 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/thumbs.css">
+  <link rel="stylesheet" href="css/toggle.css">
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/reset.css">
-  <title>스크롤 애니메이션</title>
+
+  <title>Made Simple, Be Happy</title>
+ 
+
 </head>
-<body>
 
-  <style>
-    body{
-      background: #111;
-      height: 6000px;
-    }
-    div{
-      margin-top: 1000px;
-      color: #fff;
-      text-align: center;
-    }
-  </style>
+<body data-theme="light-mode row-mode">
+  <header class="header">
+    <div class="header__wrapper">
+      <h1 class="header__start" id="btnHtml">
+        <button class="header__hamburger">&#9776;</button>
+      </h1>
+      <div class="header__center">
+        <a href="https://popo5287.github.io/homepage/"><span class="header__title">Made Simple, Be Happy</span></a>
+      </div>
+      <div class="header__end darkmode">
+        <button class="header__profile darkmode__btn">🌝</button>
+      </div>
+    </div>
+  </header>
+  
+  <div class="wrap">
+    <nav class="nav">
+      <ul class="nav__wrapper toggle_col">
+        <li id="all">
+          <button class="nav__icon">🎪</button><button class="nav__menu">ALL</button>
+        </li>
+        <li id="ui">
+          <button class="nav__icon">🕸️</button><button class="nav__menu">UI DESIGN</button> 
+        </li>
+        <li id="brand">
+          <button class="nav__icon">🚀</button><button class="nav__menu">BRAND</button>
+        </li>
+        <li id="promotion">
+          <button class="nav__icon">🤩</button><button class="nav__menu">PROMOTION</button>         
+        </li>
+        <li id="event">
+          <button class="nav__icon">🎁</button><button class="nav__menu">EVENT</button>  
+        </li>
+      </ul>
+    </nav><!--nav-->
 
-  <div><h1>ipoion 15 출사</h1></div>
-  <div><h1>충천포트를 C타입으로 바꿔달라고ㅗ?</h1></div>
-  <div><h1>그래서 충전포트를 제거했어요</h1></div>
-  <div><img src="imgs/2209_promotion.jpg"></div>
+    <section class="thumbs">
+      <div class="thumbs__wrapper"> 
 
-  <script>
-    let observer = new IntersectionObserver((e)=>{
-      e.forEach((박스)=>{
-        박스
-      })
-    })
+        <div class="thumbs__item">
+          <a href="https://popo5287.github.io/homepage/link/2404_event.html">
+            <img src="./imgs/2404_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">  
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">지구를 생각하는 한달, 4월의 특별혜택</p>
+              <p class="thumbs__text--day">2024.04</p>
+            </div>
+          </div>
+          </a>
+        </div>
+        
+        <div class="thumbs__item">
+          <a href="https://beststaylab.cafe24.com/skin-skin3">
+          <img src="./imgs/2404_js_site.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">  
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">UI DESIGN</h3>
+              <p class="thumbs__text--des">좋은숙박연구소 반응형 사이트</p>
+              <p class="thumbs__text--day">2024.03</p>
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="thumbs__item" data-toggle="modal" data-target="#modalContent1">
+          <img src="./imgs/2403_event_2.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">봄이라서 할인해봄</p>
+              <p class="thumbs__text--day">2024.03</p>
+            </div>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <div class="modal fade" id="modalContent1" style="display: none;">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">봄이라서 할인해봄
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body" id="modalBody2" data-src="https://popo5287.github.io/homepage/link/2403_event_1.html">
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+        <div class="thumbs__item" data-toggle="modal" data-target="#modalContent2">
+          <img src="./imgs/2403_event_1.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">일회용품 줄이기 정책에 대비하세요!</p>
+              <p class="thumbs__text--day">2024.03</p>
+            </div>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <div class="modal fade" id="modalContent2" style="display: none;">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header"><p>프로모션</p><span>2024.03</span>
+                  </div>
+                  <div class="modal-body" id="modalBody2" data-src="https://popo5287.github.io/homepage/link/2403_event.html">
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal">닫기 X</button>
+                  <div style="clear: both;"></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="thumbs__item">
+          <img src="./imgs/2402_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">새해복 많이 혜택도 많이</p>
+              <p class="thumbs__text--day">2024.02</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2401_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">갑진년 맞이 값진 혜택</p>
+              <p class="thumbs__text--day">2024.01</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2401_giftliving_pc.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">UI DESIGN</h3>
+              <p class="thumbs__text--des">야놀자 임직원 쇼핑몰</p>
+              <p class="thumbs__text--day">2024.01</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2312_brand_ecomenity.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">브랜드</h3>
+              <p class="thumbs__text--des">지구를 지키는 작은 실천, 에코메니티</p>
+              <p class="thumbs__text--day">2023.12</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2312_event_1.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">연말 결산 세일</p>
+              <p class="thumbs__text--day">2023.12</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2311_event_1.png" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">쇼핑의 달 11월 최대 할인 축제</p>
+              <p class="thumbs__text--day">2023.11</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2310_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">낭만가을, 쿠폰할인에 물들다</p>
+              <p class="thumbs__text--day">2023.10</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2310_bp_mo.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">UI DESIGN</h3>
+              <p class="thumbs__text--des">비품넷 쇼핑몰 모바일&앱</p>
+              <p class="thumbs__text--day">2023.10</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2310_bp_pc.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">UI DESIGN</h3>
+              <p class="thumbs__text--des">비품넷 쇼핑몰 PC</p>
+              <p class="thumbs__text--day">2023.10</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2309_giftliving_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">명절 선물의 끝판왕</p>
+              <p class="thumbs__text--day">2023.09</p>
+            </div>
+          </div>
+        </div>            
+        <div class="thumbs__item">
+          <img src="./imgs/2309_brand_amayzl.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">브랜드</h3>
+              <p class="thumbs__text--des">라이프스타일 뷰티템, 어메이즐</p>
+              <p class="thumbs__text--day">2023.09</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2308_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">paradise summer</p>
+              <p class="thumbs__text--day">2023.08</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2308_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">여름 한정 시원한 할인 쿠폰</p>
+              <p class="thumbs__text--day">2023.08</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2307_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">여름 성수기 응원</p>
+              <p class="thumbs__text--day">2023.07</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2307_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">비즈포인트 전환 이벤트</p>
+              <p class="thumbs__text--day">2023.07</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2306_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">집밖의 발견</p>
+              <p class="thumbs__text--day">2023.06</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2305_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">Family Month, 5월</p>
+              <p class="thumbs__text--day">2023.05</p>
+            </div>
+          </div>
+        </div>      
+        <div class="thumbs__item">
+          <img src="./imgs/2304_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">낭만가득 청춘여행</p>
+              <p class="thumbs__text--day">2023.04</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2303_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">꽃, 그리고 봄</p>
+              <p class="thumbs__text--day">2023.03</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2302_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">달달한 2월엔 달콤한 3종 꿀쿠폰</p>
+              <p class="thumbs__text--day">2023.02</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2302_event.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">음료 최저가 할인, DRINK RUN</p>
+              <p class="thumbs__text--day">2023.02</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2301_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">새해에는 더 잘될 거예요</p>
+              <p class="thumbs__text--day">2023.01</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2212_brand_withmoment.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">브랜드</h3>
+              <p class="thumbs__text--des">프리미엄 어메니티, 위드모먼트</p>
+              <p class="thumbs__text--day">2022.12</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2211_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">추운 겨울, 온 객실 따뜻하게</p>
+              <p class="thumbs__text--day">2022.11</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2211_event_2.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">블랙프라이데이</p>
+              <p class="thumbs__text--day">2022.11</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2211_event_1.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">우리, 음료 먹고 갈래?</p>
+              <p class="thumbs__text--day">2022.11</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2210_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">어썸! 어땜? 10월 호텔 어메니티</p>
+              <p class="thumbs__text--day">2022.10</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <img src="./imgs/2209_promotion.jpg" alt="" class="thumbs__thumbnail">
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">프로모션</h3>
+              <p class="thumbs__text--des">삼성 객실가전특판</p>
+              <p class="thumbs__text--day">2022.09</p>
+            </div>
+          </div>
+        </div>
+        <div class="thumbs__item">
+          <a href="#" data-toggle="modal" data-target="#g01">
+            <img src="./imgs/2209_event_1.jpg" alt="" class="thumbs__thumbnail">
+          </a>
+          <div class="thumbs__info">
+            <div class="thumbs__profile"></div>
+            <div class="thumbs__text">
+              <h3 class="thumbs__text--title">이벤트</h3>
+              <p class="thumbs__text--des">7일간의 타임 특가</p>
+              <p class="thumbs__text--day">2022.09</p>
+            </div>
+          </div>
+        </div>
+        <!-- modal -->
+        <div class="modal fade" id="g01" style="display: none;">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">지구를 생각하는 한달, 4월의 특별혜택 - 프로모션</div>
+                  <div class="modal-body">
+                      <img src="./imgs/2209_event_1_popup.jpg" alt="">
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-default" data-dismiss="modal">닫기 X</button>
+                  </div>
+              </div>
+          </div>
+        </div>        
+      </div><!--thumbs__wrapper-->
+    </section><!--section-->
     
-    let div = document.querySelectorAll('div')
-    observer.observe(div[0])
-    observer.observe(div[1])
-    observer.observe(div[2])
-    observer.observe(div[3])
-  </script>
+  </div><!--wrap-->
+
+  <script src="js/toggle.js"></script>
+  <script src="js/ThumbFilter.js"></script>
+  <script src="js/modal.js"></script>
+
+  
+
+
 </body>
 </html>

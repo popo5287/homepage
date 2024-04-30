@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2403 일회용품 줄이기 정책에 대비하세요 이벤트 페이지</title>
+  <!--웹 폰트 -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'chk7zur',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 </head>
+
+
 <body>
+  
   <style>
     *{margin: 0px; padding: 0px;}
     fieldset, img {border: 0 none;vertical-align: top;}
@@ -17,16 +31,15 @@
     .title h3{font-size: 40px; font-weight: 200; line-height:50px; text-align:center; padding-bottom:16px;}	
     .title h4{font-size: 18px; font-weight: 300; line-height:18px; text-align:center;}
     fieldset, img { border: 0 none; vertical-align: top;}
-    .scroll_wrap{display:none;}
     .mro_wrap{width: 100%; max-width: 1920px; margin: 0 auto;}
     .sub_content {padding: 0; width: 100%; margin: 0 auto; text-align: center;}
-    .bcdlist {position: relative; margin: 0 auto; max-width: 1116px; width: 100%; text-align: center;}   
-    .prd_tit {display:none;}
-    .item_photo_box{border:0px;}
+    .img__pc{display: block; width: 100%;}
+    .img__mo{display: none;}
   </style>
   
   <div class="mro_header">
-    <img src="../imgs/mro_header.jpg" alt="mro_pc_header">
+    <img class="img__pc" src="../imgs/mro_header.jpg" alt="mro_pc_header">
+    <img class="img__mo" src="../imgs/mro_header_m.jpg">    
   </div>
   
   <div class="title">
@@ -36,15 +49,19 @@
   <div class="sub_content">
     <div class="mro_wrap">
       <div>
-        <img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00.jpg">
-        <img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_intro.png">
-        <img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_action-1.png">
+        <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00.jpg">
+        <img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_m.jpg">
+        <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_intro.png">
+        <img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_intro_m.png">
+        <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_action-1.png">
+        <img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_action-1_m.png">
       </div>
       <div>
-        <img src="../imgs/product_1.jpg" alt="product_1">
+        <img class="img__pc" src="../imgs/product_1.jpg" alt="product_1">
       </div>    
       <div>
-        <img src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_action-2.png" usemap="#image-map">
+        <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_action-2.png" usemap="#image-map">
+        <img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2403/2403_mro_disposable_amenity_00_action-2_m.png" usemap="#image-map">
             <map name="image-map">
             <area target="" alt="" title="" href="http://s.godo.kr/27emb" coords="533,618,1377,1111" shape="rect">
         </map>
@@ -54,11 +71,22 @@
   </div>
 
   <div>
-    <img src="../imgs/product_2.jpg" alt="product_2">
+    <img class="img__pc" src="../imgs/product_2.jpg" alt="">
+    <img class="img__mo" src="../imgs/product_1_m.jpg" alt="">
   </div>  
 
   <div class="mro_footer">
-    <img src="../imgs/mro_footer.jpg" alt="mro_footer">
+    <img class="img__pc" src="../imgs/mro_footer.jpg" alt="mro_footer">
+    <img class="img__mo" src="../imgs/mro_footer_m.jpg" alt="mro_mo_fotter">    
   </div>  
+
+<style>
+      @media (max-width: 767px){
+        .img__mo{display: block;  width: 100%;}
+        .img__pc{display: none;}
+        .title h3 {font-size: 8vw;}
+        .title h4 {font-size: 4vw;}
+      }
+</style>
 </body>
 </html>

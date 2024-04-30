@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2404 지구를 생각하는 한 달 4월 이벤트 페이지</title>
+  <title>2402 새해복 많이 이벤트 페이지</title>
 </head>
 
 <!--웹 폰트 -->
@@ -20,10 +20,8 @@
 
 <style>
   *{margin: 0; padding: 0;}
-	body {font-family: "pretendard", sans-serif;}
-    ol,li,a {  list-style: none;  text-decoration: none;}
-
-
+	body {font-family: "pretendard", sans-serif; font-size: 0;}
+  ol,li,a {  list-style: none;  text-decoration: none;}
 	.title {width: 100%; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
 	.title h3{font-size: 40px; font-weight: 100; line-height:50px; text-align:center; padding-bottom:16px;}	
 	.title h4{font-size: 18px; font-weight: 200; line-height:18px; text-align:center;}
@@ -37,9 +35,9 @@
 	.tab_wrap .tab_bg .tab .on { background-color: #E5E5E5;}
 	.tab_wrap .tab_bg .tab .on a { color: #111;}
 	#content1,#content2,#content3 {  position: relative;  z-index: 1;}
-    .break::after{content: ""; display: none;}
-    .img__pc{display: block; width: 100%;}
-    .img__mo{display: none;}
+  .break::after{content: ""; display: none;}
+  .img__pc{display: block; width: 100%;}
+  .img__mo{display: none;}
 
 </style>
 
@@ -50,61 +48,91 @@
 	<img class="img__mo" src="../imgs/mro_header_m.jpg">
 </img>
 
-
 <div class="title">
 	<h3>EVENT</h3>
-	<h4>지구를 생각하는 한 달 4월의 특별 혜택</h4>
-</div>
-<div class="main_img_wrap">
-	<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00.jpg">
-	<img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00_m.jpg">
+	<h4>새해복 많이 혜택도 많이</h4>
 </div>
 
-<div id="content1" class="tab_wrap" data-tabslet-content="tab01">
-    <div class="tab_bg" id="tab_wrap1">
-        <ul class="tab map">
-            <li class="on"><a href="#tab01" data-tabslet="tab01">어메니티세트<span class="break"></span> 이벤트</a></li>  
-            <li><a href="#tab02" data-tabslet="tab02">할인쿠폰<span class="break"></span> 챙기기</a></li>  
-            <li><a href="#tab03" data-tabslet="tab03">한정수량<span class="break"></span> 쇼핑찬스</a></li>  
-        </ul>
-    </div>
-    <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00_1.png">
-	<img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00_1_m.png">
-</div>
-	
-<div id="content2" class="tab_wrap" data-tabslet-content="tab02">
-    <div class="tab_bg" id="tab_wrap2">
-        <ul class="tab map">
-            <li><a href="#tab01" data-tabslet="tab01">어메니티세트<span class="break"></span> 이벤트</a></li>  
-            <li class="on"><a href="#tab02" data-tabslet="tab02">할인쿠폰<span class="break"></span> 챙기기</a></li>  
-            <li><a href="#tab03" data-tabslet="tab03">한정수량<span class="break"></span> 쇼핑찬스</a></li>  
-        </ul>
-    </div>
-	<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00_2.png">
-	<img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00_2_m.png">
-</div>
+<!--눈내리는 영상-->
+<video autoplay muted loop id="snow" style="width: 100vw;">
+  <source id="videoSource" type="video/mp4">
+</video>
 
-<div id="content3" class="tab_wrap" data-tabslet-content="tab03">
-    <div class="tab_bg" id="tab_wrap3">
-        <ul class="tab map">
-            <li><a href="#tab01" data-tabslet="tab01">어메니티세트<span class="break"></span> 이벤트</a></li>  
-            <li><a href="#tab02" data-tabslet="tab02">할인쿠폰<span class="break"></span> 챙기기</a></li>  
-            <li class="on"><a href="#tab03" data-tabslet="tab03">한정수량<span class="break"></span> 쇼핑찬스</a></li>  
-        </ul>
-    </div>
-    <div class="box"></div>
-	<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00_3.png">
-	<img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2404/2404_mro_earth_green_00_3_m.png">
-    <div class="bcdlist">
-        <img class="img__pc" src="../imgs/2404_event_product.jpg" alt="">
-        <img class="img__mo" src="../imgs/product_1_m.jpg" alt="">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var video = document.getElementById('snow');
+  var source = document.getElementById('videoSource');
+
+  function updateVideoSource() {
+      if (window.innerWidth < 768) {
+          source.src = "https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_01_m.mp4";
+      } else {
+          source.src = "https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_01.mp4";
+      }
+      video.load();  // 비디오 소스 변경 후 비디오를 다시 로드해야 합니다.
+  }
+
+  updateVideoSource();  // 초기 로드 시 비디오 소스 설정
+  window.addEventListener('resize', updateVideoSource);  // 창 크기 변경 시 비디오 소스 업데이트
+});
+</script>
+
+
+
+<!--쿠폰이벤트-->
+<div class="sub_content">
+	<div class="mro_wrap">
+		<a name='tag1'><img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_02_2.jpg" usemap="#image-map1"></a>
+		<a name='tag1'><img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_02_2_m.jpg" usemap="#image-map1"></a>
+		<map name="image-map1">
+			<area target="" alt="" title="" href="#tag1" coords="410,5,773,73" shape="0">
+			<area target="" alt="" title="" href="#tag2" coords="787,2,1138,71" shape="0">
+			<area target="" alt="" title="" href="#tag3" coords="1148,3,1504,70" shape="0">
+		</map>
 	</div>
+</div>
+
+<!--에코메니티-->
+<div class="sub_content">
+	<div class="mro_wrap">
+		<a name='tag2'><img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_03.jpg" usemap="#image-map2"></a>
+		<a name='tag2'><img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_03_m.jpg" usemap="#image-map2"></a>
+		<map name="image-map2">
+			<area target="" alt="" title="" href="#tag1" coords="416,3,768,64" shape="rect">
+			<area target="" alt="" title="" href="#tag2" coords="782,7,1135,70" shape="0">
+			<area target="" alt="" title="" href="#tag3" coords="1153,3,1506,68" shape="0">
+		</map>
+	</div>
+</div>
+
+<div class="bcdlist">
+  <img class="img__pc" src="../imgs/2404_event_product.jpg" alt="">
+  <img class="img__mo" src="../imgs/product_1_m.jpg" alt="">
+</div>
+
+<!--품절임박-->
+<div class="sub_content">
+	<div class="mro_wrap">
+		<a name='tag3'><img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_04.jpg"  usemap="#image-map3"></a>
+		<a name='tag3'><img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2402/2402_mro_luckyevent_04_m.jpg"  usemap="#image-map3"></a>
+		<map name="image-map3">
+			<area target="" alt="" title="" href="#tag1" coords="417,8,765,68" shape="rect">
+			<area target="" alt="" title="" href="#tag2" coords="795,7,1131,64" shape="0">
+			<area target="" alt="" title="" href="#tag3" coords="1153,12,1504,71" shape="0">
+		</map>
+	</div>
+</div>
+<div class="bcdlist">
+  <img class="img__pc" src="../imgs/2404_event_product.jpg" alt="">
+  <img class="img__mo" src="../imgs/product_1_m.jpg" alt="">
 </div>
 
 <div class="mro_footer">
 	<img class="img__pc" src="../imgs/mro_footer.jpg" alt="mro_pc_fotter">
 	<img class="img__mo" src="../imgs/mro_footer_m.jpg" alt="mro_mo_fotter">
 </div>  
+
+
 
 <style>
     @media (max-width: 767px){
@@ -153,7 +181,6 @@ $(document).ready(function() {
 $(window).on('scroll', function() {
     console.log("Page scrolled!");
 });
-</script>
+</script>  
 
 </body>
-</html>

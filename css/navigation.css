@@ -86,7 +86,7 @@
     padding: 0;
     display: flex;
     margin: 0;
-    width: fit-content; /* 내용에 맞게 너비 조정 */
+    /* width: fit-content; 내용에 맞게 너비 조정 */
     min-width: 100vw;
     min-height: 50px;
     overflow-x: auto;

@@ -1,15 +1,217 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-    <!--[if lt IE 10]>
-    link href="css.ie.css" type="text/css" rel="stylesheet"/>
-    <!-[endif]-->
-</head>
-<body>
-    
-</body>
-</html>
+
+<!--웹 폰트 -->
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'chk7zur',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  
+  <style>
+      body {font-family: "pretendard", sans-serif;}
+      .title {width: 100%; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+      .title h3{font-size: 40px; font-weight: 100; line-height:50px; text-align:center; padding-bottom:16px;}	
+      .title h4{font-size: 18px; font-weight: 200; line-height:18px; text-align:center;}
+      .main_img_wrap{width:100%;}
+      .main_img_wrap img { width: 100%;}
+      .sub_content{text-align: center; width:100%; padding:0px;}
+      .sub_content h1 {font-weight: 800; font-size: 45px; padding-top: 140px;}
+      .sub_content h2 {font-weight: 800; font-size: 35px; padding-top: 70px; color:#2CA54F;}
+      .sub_content p{font-weight:300; font-size:30px;}
+      .prd_tit{display:none;}
+      #scroll_right{display:none;}
+      .main_wrap_65{padding-bottom:110px;}
+      .goods_content_36{width: 1100px; margin: 0 auto;}
+      .tab_wrap { width: 100%; overflow: hidden; position: relative;}
+      .tab_wrap .tab_bg { width: 100%;  background-color: #9E6AB7;  position: sticky;  top: 0;  z-index: 99;}
+      .tab_wrap .tab_bg .tab {  margin: 0 auto;  max-width: 1101px;  display: flex;  height: 76px;  line-height: 76px;}
+      .tab_wrap .tab_bg .tab li { flex: 1; font-size: 25px;  font-weight: 300;  text-align: center;  cursor: pointer;  border-right: 2px #fff solid;  box-sizing: border-box;}
+      .tab_wrap .tab_bg .tab li:first-child { flex: 1;  font-size: 25px;  font-weight: 300;  text-align: center;  cursor: pointer;  border-left: 2px #fff solid;  box-sizing: border-box;}
+      .tab_wrap .tab_bg .tab li a { color: #fff;  font-weight: 500;}
+      .tab_wrap .tab_bg .tab .click { background-color: #fff;}
+      .tab_wrap .tab_bg .tab .click a { color: #111;}
+      #content1,#content2,#content3 {  position: relative;  z-index: 1;}
+      ol,li,a {  list-style: none;  text-decoration: none;}
+      .goods_list { padding-bottom: 100px;}
+      .bcdlist {width: 1116px; margin: 0 auto;}
+      .slick-container{width: 1116px; margin: 30px auto;}
+      .slick-slide img {margin: 0 auto;}
+      .slick-slider .slick-list {padding-bottom: 100px;}
+      .item{width: 28%;}
+      .slick-dots{text-align: center; position: absolute; width: 100%; bottom:60px; }
+      .slick-dots li{display: inline-block; margin: 8px;}
+      .slick-dots li button{width:10px; height: 10px; background-color: #d7d7d7; border-radius: 50%; cursor: pointer; font-size: 0; line-height: 0; text-indent: -00000000px; border:none}
+      .slick-dots li.slick-active button{background-color: #9C9C9C;}
+      .product__name{text-align: center; display: block; margin-top: 30px; letter-spacing:-0.5px; font-size:22px;}
+  </style>
+  <div class="title">
+      <h3>EVENT</h3>
+      <h4>감사의 달 5월, 통합발주센터 회원 여러분께 드리는 감사 혜택</h4>
+  </div>
+  <div class="main_img_wrap">
+      <img src="https://yanolja001.godohosting.com/pair/promotion/2405/2405_mro_thankyou_00.jpg">
+  </div>
+  
+  <div id="content1" class="tab_wrap" data-tabslet-content="tab01">
+      <div class="tab_bg" id="tab_wrap1">
+          <ul class="tab map">
+              <li class="click"><a href="#tab01" data-tabslet="tab01">할인쿠폰 챙기기</a></li>  
+              <li><a href="#tab02" data-tabslet="tab02">어메니티세트 초특가</a></li>  
+              <li><a href="#tab03" data-tabslet="tab03">BEST 인기템</a></li>  
+          </ul>
+      </div>
+  
+      <img src="https://yanolja001.godohosting.com/pair/promotion/2405/2405_mro_thankyou_00_1.png" usemap="#image-map">
+  
+      <map name="image-map">
+          <area target="" alt="5000woncoupon" title="5000woncoupon" href="javascript:couponLinkDown('654');" coords="631,349,1270,785" shape="rect">
+          <area target="" alt="3%coupon" title="3%coupon" href="javascript:couponLinkDown('650');" coords="619,1079,1314,1535" shape="0">
+          <area target="" alt="5%coupon" title="5%coupon" href="javascript:couponLinkDown('651');" coords="373,1564,952,2058" shape="0">
+          <area target="" alt="7%coupon" title="7%coupon" href="javascript:couponLinkDown('652');" coords="977,1586,1567,2048" shape="0">
+      </map>
+  
+  
+      
+      
+  <div id="content2" style="background:#f9f9f9;" class="tab_wrap" data-tabslet-content="tab02">
+      <div class="tab_bg" id="tab_wrap2">
+          <ul class="tab map">
+              <li><a href="#tab01" data-tabslet="tab01">할인쿠폰 챙기기</a></li>  
+              <li class="click" style="background:#f9f9f9;"><a href="#tab02" data-tabslet="tab02">어메니티세트 초특가</a></li>  
+              <li><a href="#tab03" data-tabslet="tab03">BEST 인기템</a></li>  
+          </ul>
+      </div>
+      <img src="https://yanolja001.godohosting.com/pair/promotion/2405/2405_mro_thankyou_00_2.png">
+      <div class="slick-container">
+      <div class="item">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/beststaylab_eco_amenityset_thumb_2.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/beststaylab_eco_amenityset_thumb_1.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/beststaylab_eco_amenityset_thumb_3.jpg" alt="">
+      </div>
+      <div class="product__name">에코(Eco-Friendly) 어메니티 세트<br>친환경 파우치 패키지</div>
+    </div>
+  
+      <div class="slick-container">
+      <div class="item">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_kraft_thumb_3.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_kraft_thumb_1.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_kraft_thumb_4.jpg" alt="">
+      </div>
+      <div class="product__name">위드모먼트 어메니티 세트<br>크라프트 지퍼백 패키지</div>
+    </div>
+  
+    <div class="slick-container">
+      <div class="item">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_bathroom_thumb_2.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_bathroom_thumb_1.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_bathroom_thumb_3.jpg" alt="">
+      </div>
+      <div class="product__name">위드모먼트 어메니티 세트</div>
+    </div>
+  
+    <div class="slick-container">
+      <div class="item">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_bathroom_cd_thumb_2.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_bathroom_cd_thumb_1.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/chae/withmoment_amenityset_bathroom_cd_thumb_3.jpg" alt="">
+      </div>
+      <div class="product__name">위드모먼트 어메니티 세트(+콘돔포함)</div>
+    </div>
+  
+    <div class="slick-container">
+      <div class="item">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/pair/product/amayzl_amenityset_bathroom_thumb_02.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/pair/product/amayzl_amenityset_bathroom_thumb_01.jpg" alt="">
+        <img style="width: 372px;" src="https://yanolja001.godohosting.com/pair/product/amayzl_amenityset_bathroom_thumb_03.jpg" alt="">
+      </div>
+      <div class="product__name">어메이즐 헤어&페이스&바디 키트</div>
+    </div>
+  
+      <div class="bcdlist">
+      {=includeWidget('goods/_goods_display_main.html','sno','76')}</div>
+  
+  </div>
+  
+  <div id="content3" class="tab_wrap" data-tabslet-content="tab03">
+      <div class="tab_bg" id="tab_wrap3">
+          <ul class="tab map">
+              <li><a href="#tab01" data-tabslet="tab01">할인쿠폰 챙기기</a></li>  
+              <li><a href="#tab02" data-tabslet="tab02">어메니티세트 초특가</a></li>  
+              <li class="click"><a href="#tab03" data-tabslet="tab03">BEST 인기템</a></li>  
+          </ul>
+      </div>
+      <div class="box"></div>
+      <img src="https://yanolja001.godohosting.com/pair/promotion/2405/2405_mro_thankyou_00_3.png">
+      <div class="bcdlist">
+      {=includeWidget('goods/_goods_display_main.html','sno','77')}
+      </div>
+          <a href="https://www.yanoljamro.com/board/view.php?&bdId=event&sno=28"><img src="https://yanolja001.godohosting.com/pair/promotion/2405/2405_mro_thankyou_00_4.png"></a>
+  </div>
+  
+      <!-- Load jQuery first -->
+      <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!--<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  
+  <!-- Slick 스크립트 로드 -->
+  <!--<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
+      
+  
+  
+  <script>
+  $(document).ready(function() {
+      // 각 탭 그룹별 클릭 이벤트 처리
+      $('#tab_wrap1 .tab li a, #tab_wrap2 .tab li a, #tab_wrap3 .tab li a').on('click', function(e) {
+          e.preventDefault();
+  
+          var targetId = $(this).attr('href').substr(1);  // href에서 # 제거
+          var targetContent = $('[data-tabslet-content="' + targetId + '"]');
+  
+          // 해당 탭에 맞는 컨텐츠로 스크롤
+          $('html, body').animate({
+              scrollTop: targetContent.offset().top
+          }, 500);
+  
+          // 다른 탭의 활성 상태 초기화
+          $(this).closest('.tab').find('li').removeClass('click');
+          $(this).parent('li').addClass('click');
+      });
+  });
+  
+  
+  </script>
+  
+  <script>
+  $(document).ready(function() {
+      $('.tab_wrap .tab_bg .tab li a').click('click', function(e) {
+          e.preventDefault();
+          console.log("Tab clicked!");
+      });
+  });
+  </script>
+  
+  <script>
+  $(window).click('scroll', function() {
+      console.log("Page scrolled!");
+  });
+  </script>
+      
+      <script>
+      $('.slick-container').slick({
+          infinite: true, //양방향 무한 모션
+          speed:300, // 슬라이드 스피드
+          autoplay: true, //자동플레이 유무( false시 자동플레이 안됨 )
+          autoplaySpeed:4000, // 자동플레이 스피드
+          arrows: true,
+          appendArrows: $('#arrows'),
+          dots:true, 
+          slidesToScroll: 3,
+          slidesToShow: 3
+      });
+      </script>
+  
+  

@@ -194,7 +194,30 @@
             observeParents: true,
         });
     </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var links = document.querySelectorAll('.mobile-device');
+      links.forEach(function(link) {
+          link.addEventListener('click', function(e) {
+              e.preventDefault(); // 기본 이벤트(링크 이동) 방지
+              var href = this.getAttribute('href');
+  
+              // 창 크기와 위치 계산
+              var width = 375;
+              var height = 624;
+              var left = (window.innerWidth / 2) - (width / 2);
+              var top = (window.innerHeight / 2) - (height / 2);
 
+              // 위치 보정: 일부 브라우저에서는 스크린의 상단 좌표를 0으로 계산하지 않을 수 있음
+              left = left < 0 ? 0 : left;
+              top = top < 0 ? 0 : top;
+  
+              // 새 창 열기, 위치와 크기 지정
+              window.open(href, '_blank', `width=${width},height=${height},top=${top},left=${left}`);
+          });
+      });
+  });
+</script>
 
 </body>
 </html>

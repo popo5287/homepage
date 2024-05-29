@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/toggle.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/reset.css">
-
   <title>Made Simple, Be Happy</title>
  
 
@@ -19,13 +18,19 @@
   <header class="header">
     <div class="header__wrapper">
       <h1 class="header__start" id="btnHtml">
-        <button class="header__hamburger">&#9776;</button>
+        <button class="header__hamburger">
+          <img class="icon__dark" src="imgs/icon/hamburger.png">
+          <img class="icon__light" src="imgs/icon/hamburger_0.png">
+        </button>
       </h1>
       <div class="header__center">
         <a href="https://popo5287.github.io/homepage/"><span class="header__title">Made Simple, Be Happy</span></a>
       </div>
       <div class="header__end darkmode">
-        <button class="header__profile darkmode__btn">🌝</button>
+        <button class="header__profile darkmode__btn">
+          <img class="icon__light" src="imgs/icon/night_0.png">
+          <img class="icon__dark" src="imgs/icon/night.png">
+        </button>
       </div>
     </div>
   </header>
@@ -33,20 +38,55 @@
   <div class="wrap">
     <nav class="nav">
       <ul class="nav__wrapper toggle_col">
-        <li id="all">
-          <button class="nav__icon">🎪</button><button class="nav__menu">ALL</button>
+        <li class="nav__item" data-category="all" style="margin-top: 8px;">
+          <button class="nav__icon darkmode">
+            <div class="gif-container">
+              <img class="staticGif icon__light" src="imgs/icon/in-love.png" alt="Static GIF">
+              <img class="animatedGif hidden icon__light" src="imgs/icon/in-love.gif" alt="Animated GIF">
+              <img class="animatedGif hidden icon__dark" src="imgs/icon/in-love_dark.gif" alt="Animated GIF">
+            </div>
+          </button>
+          <button class="nav__menu">ALL</button>
         </li>
-        <li id="ui">
-          <button class="nav__icon">🕸️</button><button class="nav__menu">UI DESIGN</button> 
+        <li class="nav__item" data-category="ui">
+          <button class="nav__icon">
+            <div class="gif-container">
+              <img class="staticGif icon__light" src="imgs/icon/ui.png" alt="Static GIF">
+              <img class="animatedGif hidden icon__light" src="imgs/icon/ui.gif" alt="Animated GIF">
+              <img class="animatedGif hidden icon__dark" src="imgs/icon/ui_dark.gif" alt="Animated GIF">
+            </div>
+          </button>
+          <button class="nav__menu">UI DESIGN</button>
         </li>
-        <li id="brand">
-          <button class="nav__icon">🚀</button><button class="nav__menu">BRAND</button>
+        <li class="nav__item" data-category="brand">
+          <button class="nav__icon">
+            <div class="gif-container">
+              <img class="staticGif icon__light" src="imgs/icon/brand.png" alt="Static GIF">
+              <img class="animatedGif hidden icon__light" src="imgs/icon/brand.gif" alt="Animated GIF">
+              <img class="animatedGif hidden icon__dark" src="imgs/icon/brand_dark.gif" alt="Animated GIF">
+            </div>
+          </button>
+          <button class="nav__menu">BRAND</button>
         </li>
-        <li id="promotion">
-          <button class="nav__icon">🤩</button><button class="nav__menu">PROMOTION</button>         
+        <li class="nav__item" data-category="promotion">
+          <button class="nav__icon">
+            <div class="gif-container">
+              <img class="staticGif icon__light" src="imgs/icon/promotion.png" alt="Static GIF">
+              <img class="animatedGif hidden icon__light" src="imgs/icon/promotion.gif" alt="Animated GIF">
+              <img class="animatedGif hidden icon__dark" src="imgs/icon/promotion_dark.gif" alt="Animated GIF">
+            </div>
+          </button>
+          <button class="nav__menu">PROMOTION</button>
         </li>
-        <li id="event">
-          <button class="nav__icon">🎁</button><button class="nav__menu">EVENT</button>  
+        <li class="nav__item" data-category="event">
+          <button id="event" class="nav__icon">
+            <div class="gif-container">
+              <img class="staticGif icon__light" src="imgs/icon/event.png" alt="Static GIF">
+              <img class="animatedGif hidden icon__light" src="imgs/icon/event.gif" alt="Animated GIF">
+              <img class="animatedGif hidden icon__dark" src="imgs/icon/event_dark.gif" alt="Animated GIF">
+            </div>
+          </button>
+          <button class="nav__menu">EVENT</button>
         </li>
       </ul>
     </nav><!--nav-->
@@ -563,6 +603,28 @@
     
   </div><!--wrap-->
 
+  <footer>
+    <div class="footer__left">
+      고아영 pair89@naver.com COPYRIGHT <br>ⓒ AH-KO. ALL RIGHTS RESERVED
+    </div>
+    <div class="footer_right">
+      본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+    <a href="https://www.flaticon.com/free-animated-icons/idea" title="idea animated icons">Icons created by Freepik - Flaticon</a>
+    </div>
+  </footer>
+
+  <style>
+    footer {
+   text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px;
+    background: #f9f9f9;
+    color: #444;
+    line-height: 30px;
+    font-size: 14px;
+}
+  </style>
   <script src="js/toggle.js"></script>
   <script src="js/ThumbFilter.js"></script>
   <script src="js/modal.js"></script>
@@ -589,7 +651,7 @@
     });
     </script>
     
-    
+    <script src="js/hoverAnimated.js"></script>
 
 
 </body>

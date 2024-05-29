@@ -1,5 +1,24 @@
 :root{--nav-width-big: 240px; --nav-width: 220px; --nav-width-small:100px} 
 
+.hidden {
+  display: none;
+}
+
+.gif-container {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.gif-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+
 .nav{
   position: fixed;
   top: 0;
@@ -21,13 +40,14 @@
 
 .nav__wrapper li{
   display: flex;
-  padding: 10px 8px;
+  padding: 8px;
+  margin: 8px 0px;
 }
 
 
 .nav__wrapper li:hover{
-  background-color: #f4f4f4;
-  border-radius: 2px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
 }
 
 .nav__icon{

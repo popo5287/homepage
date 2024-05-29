@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // GIF 전환 기능 추가
+    const navItems = document.querySelectorAll('.nav__item');
+
+    navItems.forEach(item => {
+        const staticGif = item.querySelector('.staticGif');
+        const animatedGif = item.querySelector('.animatedGif');
+
+        if (staticGif && animatedGif) {
+            item.addEventListener('mouseover', function() {
+                staticGif.classList.add('hidden');
+                animatedGif.classList.remove('hidden');
+            });
+
+            item.addEventListener('mouseout', function() {
+                staticGif.classList.remove('hidden');
+                animatedGif.classList.add('hidden');
+            });
+        }
+    });
+
     // 카테고리 필터링 함수
     function filterCategory(category) {
         const items = document.querySelectorAll(".thumbs__item");
@@ -19,31 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-  
+
     // 각 버튼에 대한 이벤트 처리
-    document.getElementById("all").addEventListener("click", function (event) {
-        event.preventDefault();
-        filterCategory("all");
+    navItems.forEach(item => {
+        const category = item.getAttribute("data-category");
+        item.addEventListener("click", function (event) {
+            event.preventDefault();
+            filterCategory(category);
+        });
     });
-  
-    document.getElementById("ui").addEventListener("click", function (event) {
-        event.preventDefault();
-        filterCategory("ui");
-    });
-  
-    document.getElementById("brand").addEventListener("click", function (event) {
-        event.preventDefault();
-        filterCategory("brand");
-    });
-  
-    document.getElementById("promotion").addEventListener("click", function (event) {
-        event.preventDefault();
-        filterCategory("promotion");
-    });
-  
-    document.getElementById("event").addEventListener("click", function (event) {
-        event.preventDefault();
-        filterCategory("event");
-    });
-  });
-  
+});

@@ -1,9 +1,17 @@
+
+.darkmode__btn{position: relative;}
+.darkmode__btn>img{width: 100%;}
+
 .header{
   width: 100%;
   background-color: #fff;
   z-index: 10;
   height: 100px;
   position: relative;
+}
+
+.header__hamburger, .header__profile {
+  background-color: #fff;
 }
 
 .header__wrapper{
@@ -25,13 +33,12 @@
   height: 34px;
   /* line-height: 27px; */
   text-align: center;
-  font-size: 1rem;
   border: 1px solid #606060;
-  background-color: #efefef;
+  background-color: #fff;
   border-radius: 2px;
 }
 
-
+.header__hamburger>img{width: 100%;}
 .header__hamburger__tab {
   display: none;
   font-family: 'Noto Sans KR', "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -66,9 +73,9 @@
   font-family: 'Noto Sans KR', "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
   width: 34px;
   height: 34px;
-  border: 1px solid #767676;
+  border: 1px solid #606060;
   border-radius: 2px;
-  background-color: #efefef;
+  background-color: #fff;
   /* line-height: 31px; */
   text-align: center;
 }

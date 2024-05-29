@@ -1,4 +1,9 @@
+.icon__dark{display: none;}
+
+
 /* darkmode */
+[data-theme="dark-mode"] .icon__dark{display: block;}
+[data-theme="dark-mode"] .icon__light{display: none;}
 
 [data-theme="dark-mode"] {
   background-color: #333;
@@ -9,7 +14,12 @@
   background-color: #333;
   }
 
-  [data-theme="dark-mode"] .header__profile{
+  [data-theme="dark-mode"] .header__hamburger {
+    background-color: #333;
+  }
+
+  
+  [data-theme="dark-mode"] .header__profile {
     background-color: #333;
   }
 
@@ -27,14 +37,25 @@
   }
 
   [data-theme="dark-mode"] .header__hamburger {
-  background-color: #333;
+  /*background-color: #333;*/
   color: #fff;
-  border: 1px solid #606060;
+  border: 1px solid #999;
   border-radius: 2px;
   }
 
+  [data-theme="dark-mode"] .header__profile {
+    /*background-color: #333;*/
+    color: #fff;
+    border: 1px solid #999;
+    border-radius: 2px;
+    }
+
   [data-theme="dark-mode"] .nav__menu {
   color: #fff;
+  }
+
+  [data-theme="dark-mode"] .nav__wrapper li {
+    border-radius: 6px;
   }
 
   
@@ -43,14 +64,12 @@
     }  
 
   [data-theme="dark-mode"] .thumbs__text--title{
-    color: #606060;
+    color: #ccc;
     } 
 
   [data-theme="dark-mode"] .thumbs__text--day {
     color: #606060;
     }  
-
-
     
 
   [data-theme="dark-mode"] .nav__wrapper li:hover{

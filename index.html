@@ -15,6 +15,12 @@
 </head>
 
 <body data-theme="light-mode row-mode">
+  <div class="fixed01"></div>
+  <div class="fixed01__mo"></div>
+  <div class="fixed02"></div>
+  <div class="fixed02__mo"></div>
+
+  <div class="contents">
   <header class="header">
     <div class="header__wrapper">
       <h1 class="header__start" id="btnHtml">
@@ -24,7 +30,7 @@
         </button>
       </h1>
       <div class="header__center">
-        <a href="https://popo5287.github.io/homepage/"><span class="header__title">Made Simple, Be Happy</span></a>
+        <a href="https://popo5287.github.io/homepage/"><span class="header__title">made simple, be happy</span></a>
       </div>
       <div class="header__end darkmode">
         <button class="header__profile darkmode__btn">
@@ -569,6 +575,16 @@
           </a>
         </div><!--2209 7일간의 타임 특가-->
 
+        <div class="footer">
+          <div class="footer__left">
+            COPYRIGHT ⓒ AH-KO. ALL RIGHTS RESERVED
+          </div>
+          <div class="footer_right">
+            본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
+          <a href="https://www.flaticon.com/free-animated-icons/idea" title="idea animated icons">Icons created by Freepik - Flaticon</a>
+          </div>
+        </div>
+
         <!--<div class="thumbs__item">
           <a href="#" data-toggle="modal" data-target="#g01">
             <img src="./imgs/2209_event_1.jpg" alt="" class="thumbs__thumbnail">
@@ -603,27 +619,26 @@
     
   </div><!--wrap-->
 
-  <footer>
-    <div class="footer__left">
-      고아영 pair89@naver.com COPYRIGHT <br>ⓒ AH-KO. ALL RIGHTS RESERVED
-    </div>
-    <div class="footer_right">
-      본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
-    <a href="https://www.flaticon.com/free-animated-icons/idea" title="idea animated icons">Icons created by Freepik - Flaticon</a>
-    </div>
-  </footer>
+  </div>
+
+
 
   <style>
-    footer {
-   text-align: center;
+.footer {
+    border-top: 1px solid #ccc;
+    padding: 10px 15px;
     width: 100%;
-    margin-top: 50px;
-    padding: 50px;
-    background: #f9f9f9;
+    margin-top: 128px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     color: #444;
     line-height: 30px;
     font-size: 14px;
+
+
 }
+
   </style>
   <script src="js/toggle.js"></script>
   <script src="js/ThumbFilter.js"></script>

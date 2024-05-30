@@ -1,12 +1,15 @@
 .wrap{
   display: flex;
+  height: calc(100vh - 100px);
+  overflow: scroll;
 }
 
 h3{margin-bottom: .2rem !important;}
 
 .thumbs {
-  margin-left: var(--nav-width-big); /* nav의 너비만큼 여백을 줌 */
+  /* margin-left: var(--nav-width-big); nav의 너비만큼 여백을 줌 */
   background-color: #fff;
+  height: 100vh;
 
 }
 
@@ -58,7 +61,7 @@ h3{margin-bottom: .2rem !important;}
 }
 
 .toggle.thumbs {
-  margin-left: var(--nav-width-small);
+  /* margin-left: var(--nav-width-small); */
 }
 
 @media screen and (max-width:1900px) {

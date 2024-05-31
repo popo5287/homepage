@@ -1,6 +1,17 @@
   /* reset.css 파일 내용 */
 	@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
+	@font-face {
+		font-family: 'Pretendard-Regular';
+		src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	body, * {
+		font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif !important;
+	}
+
 @font-face {
 	font-family: 'Pretendard-Regular';
 	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');

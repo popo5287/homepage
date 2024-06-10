@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2306 집밖의 발견 이벤트</title>
+  <title>2210 어썸! 어땜? 10월 호텔 어메니티 이벤트 페이지</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--웹 폰트 -->
     <script>
@@ -22,25 +22,15 @@
   body {font-family: "pretendard", sans-serif; transition: width 0.5s ease-in-out; max-width: 100%; min-width: 360px; background: #fff; -webkit-text-size-adjust: none; display: flex; justify-content: center; flex-direction: column; word-break: keep-all; overflow-x: hidden; word-wrap: break-word; margin: 0 auto;  /* 가로 중앙 정렬 */}
   ol,li,a { list-style: none;  text-decoration: none;}
   .viewDesktop { transition: width 0.5s ease-in-out, height 0.5s ease-in-out; /* 크기 변경 애니메이션 */ width: 100%; /* 초기 너비 설정 */ height: auto; /* 초기 높이 설정 */ overflow: hidden; /* 넘치는 부분은 숨김 */}    
-
+  .title {width: 100%; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+  .title h3{font-size: 40px; font-weight: 100; line-height:50px; text-align:center; padding-bottom:16px;}	
+  .title h4{font-size: 18px; font-weight: 200; line-height:18px; text-align:center;}
   .main_img_wrap{width:100%; font-size: 0;}
   #wrap {min-width: auto;}
   video {-webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden;  -moz-backface-visibility: hidden;}
   .img__pc{display: block; width: 100%;}
   .img__mo{display: none;}
   :root {--swiper-navigation-size: 44px;}
-
-  .section_wrap { width: 100%; overflow: hidden; position: relative;}
-    .section_wrap .section_bg { width: 100%;  position: sticky;  top: 0;  z-index: 99;}
-    .section_wrap .section_bg .section {  margin: 0 auto;  max-width: 1101px;  display: flex;  height: 67px;  line-height: 67px;}
-    .section_wrap .section_bg .section li { flex: 1; font-size: 15px;  font-weight: 300;  text-align: center;  cursor: pointer;  box-sizing: border-box;}
-    .section_wrap .section_bg .section li:first-child { flex: 1;  font-weight: 300;  text-align: center;  cursor: pointer;  border-bottom: 5px #555 solid;  box-sizing: border-box;}
-    .section_wrap .section_bg .section li a { color: #555;  font-weight: 500;}
-
-    h1{text-align: center;
-    font-size: 40px;
-    font-weight: 700;
-    padding: 100px 0 40px;}
 
   @media (min-width:768px){
   .samplePage { height: 100%;}
@@ -73,7 +63,7 @@
                     <div class="inner">
                         <div class="deviceFrame">
                             <button class="btnFrameDesktop active" id="btnFrameDesktop"></button>
-                            <a href="https://popo5287.github.io/homepage/link/2306_event.html" class="mobile-device">
+                            <a href="https://popo5287.github.io/homepage/link/2302_event_1.html" class="mobile-device">
                                 <button class="btnFrameMobile" id="btnFrameMobile"></button>
                             </a>
                         </div>
@@ -90,60 +80,28 @@
     <img class="img__mo" src="../imgs/mro_header_m.jpg">
 </div>
 
+<div class="title">
+	<h3>EVENT</h3>
+	<h4>어썸! 어땜? 10월 호텔 어메니티</h4>
+</div>
 
 <div class="sub_content">
 	<div class="mro_wrap">
-		<div class="margin-img" style="position: relative;">
-			<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2306/2306_mro_coupounevent_mainbanner_bg.jpg">
-            <div>
-                <ul style="position: absolute;
-                bottom: 5%;
-                display: flex;
-                justify-content: center;
-                width: 100vw;">
-                    <li style="width: 10px; height: 10px; margin:0 10px; background: #777;"></li>
-                    <li style="width: 10px; height: 10px; margin:0 10px; background: #444;"></li>
-                    <li style="width: 10px; height: 10px; margin:0 10px; background: #444;"></li>
-                    <li style="width: 10px; height: 10px; margin:0 10px; background: #444;"></li>
-                </ul>
-            </div>
-			<img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2306/2306_mro_coupounevent_mainbanner_m.jpg">
+		<div>
+			<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/10month/2210_MRO_promotion_mainbanner_01_bg.jpg">
+			<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/10month/2210_MRO_promotion_mainbanner_02_bg.jpg">
+			<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/10month/2210_MRO_promotion_mainbanner_03_bg.jpg">
+			<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/10month/2210_MRO_promotion_mainbanner_04_bg.jpg">
+			<img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/10month/2210_MRO_promotion_mainbanner_05_bg.jpg">
+			<img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/10month/2210_MRO_promotion_mainbanner_m.jpg">
 		</div>
+    <div>
+      <img class="img__pc" src="../imgs/product_2.jpg">
+      <img class="img__mo" src="../imgs/product_1_m.jpg">
+    </div> 
 	</div>
 </div>
-
-<img class="img__mo" src="../imgs/mro_body_m.jpg">
-
-<div id="around1" class="section_wrap img__pc" data-sectionslet-around="section01">
-    <div class="section_bg" id="section_wrap1">
-        <ul class="section map">
-            <li class="on"><a href="#section01" data-sectionslet="section01">집밖의 발견</a></li>  
-            <li><a href="#section02" data-sectionslet="section02">에코메니티 시리즈</a></li>  
-            <li><a href="#section03" data-sectionslet="section03">비즈포인트 이벤트</a></li> 
-            <li><a href="#section03" data-sectionslet="section03">채널 추가 이벤트</a></li> 
-        </ul>
-    </div>
-</div>
-    <div>
-        <h1>어메니티 패키지/세트 상품</h1>
-    </div>
-<div>
-    <img class="img__pc" src="../imgs/product_2.jpg">
-
-    <img class="img__mo" src="../imgs/product_1_m.jpg">
-  </div> 
-
-<br>
-
-<div>
-    <h1>신규 상품</h1>
-</div>
-<div>
-<img class="img__pc" src="../imgs/product_2.jpg">
-<img class="img__mo" src="../imgs/product_1_m.jpg">
-</div> 
-
-<br>
+	
 
 <div class="mro_footer">
   <img class="img__pc" src="../imgs/mro_footer.jpg" alt="mro_pc_fotter">
@@ -153,14 +111,10 @@
 
 <style>
   @media (max-width: 767px){
-    .title{height: 125px;}
-    .title h3 {font-size: 6.5vw; line-height: 20px;}
-      .title h4 {font-size: 4vw;}
-      .margin-img>img{ width: 100vw !important;}
       .img__mo{display: block;  width: 100%;}
       .img__pc{display: none;}
-      h1{font-size: 6.5vw;}
-
+      .title h3 {font-size: 8vw;}
+      .title h4 {font-size: 4vw;}
   }
 </style>
 

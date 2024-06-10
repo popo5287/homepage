@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2305 Family Month, 5월 이벤트 페이지</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    *{margin: 0; padding: 0;}
+    body {font-family: "pretendard", sans-serif; transition: width 0.5s ease-in-out; max-width: 100%; min-width: 360px; background: #fff; -webkit-text-size-adjust: none; display: flex; justify-content: center; flex-direction: column; word-break: keep-all; overflow-x: hidden; word-wrap: break-word; margin: 0 auto;  /* 가로 중앙 정렬 */}
+    ol,li,a { list-style: none;  text-decoration: none;}
+    .viewDesktop { transition: width 0.5s ease-in-out, height 0.5s ease-in-out; /* 크기 변경 애니메이션 */ width: 100%; /* 초기 너비 설정 */ height: auto; /* 초기 높이 설정 */ overflow: hidden; /* 넘치는 부분은 숨김 */}
+    .title {width: 100%; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+    .title h3{font-size: 40px; font-weight: 100; line-height:50px; text-align:center; padding-bottom:16px;}	
+    .title h4{font-size: 18px; font-weight: 200; line-height:18px; text-align:center;}
+    .main_img_wrap{width:100%; font-size: 0;}
+    .sub_content{text-align: center; width:100%; padding:0px;}
+    .sub_content h1 {font-weight: 800; font-size: 45px; padding-top: 140px;}
+    .sub_content h2 {font-weight: 800; font-size: 35px; padding-top: 70px; color:#2CA54F;}
+    .sub_content p{font-weight:300; font-size:30px;}
+    
+    .img__pc{display: block; width: 100%;}
+    .img__mo{display: none;}
+    :root {--swiper-navigation-size: 44px;}
+
+    
+  
+    @media (min-width:768px){
+    .samplePage { height: 100%;}
+    .sampleArea { overflow: hidden; width: 100%; height: 100%;}
+    .sampleArea>.head { padding: 8px 0; background: #32343e;}
+    .sampleArea>.head .inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; align-items: center;}
+    [class^=btn] { -webkit-transition-duration: .3s; transition-duration: .3s; -webkit-transition-property: background,color,border; transition-property: background,color,border; -webkit-transition-timing-function: ease; transition-timing-function: ease; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].active { background: #191a1f;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameDesktop { margin: 0 4px 0 0;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameDesktop:before { background-image: url(../imgs/ico_frame_desktop.png); background-size: 20px 17px;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame]:before { content: ""; display: block; position: absolute; left: 0; top: 0; z-index: 10; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameMobile { margin: 0 0 0 4px;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameMobile:before { background-image: url(../imgs/ico_frame_mobile.png); background-size: 14px 20px;}
+    .sampleArea>.content { position: relative; width: 100%; height: calc(100% - 61px);}
+    .sampleArea>.content.viewDesktop .previewContent { left: 0; top: 0; max-width: 100%; max-height: 100%;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame] { display: inline-block; position: relative; overflow: hidden; width: 40px; height: 40px; border-radius: 4px; overflow: hidden; text-indent: 150%; white-space: nowrap; font-size: 1px; line-height: 0; color: transparent;}
+    .sampleArea>.content .previewContent { position: absolute; width: 100%; height: 100%; -webkit-transition: all .6s ease; transition: all .6s ease;}
+    .sampleArea>.content .previewContent iframe { position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    button{background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer}
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="content">
+      <div class="previewContent">
+          <div id="app">
+              <div class="sampleArea">
+                  <div class="head">
+                      <div class="inner">
+                          <div class="deviceFrame">
+                              <button class="btnFrameDesktop active" id="btnFrameDesktop"></button>
+                              <a href="https://popo5287.github.io/homepage/link/2405_event.html" class="mobile-device">
+                                  <button class="btnFrameMobile" id="btnFrameMobile"></button>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="viewDesktop">
+      <div class="mro_header">
+          <img class="img__pc" src="../imgs/mro_header.jpg">
+          <img class="img__mo" src="../imgs/mro_header_m.jpg">
+      </div>
+
+
+      <div class="w3-content w3-section img__pc">
+        <img class="mySlides img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_01.jpg" style="width:100%">
+        <img class="mySlides img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_02.jpg" style="width:100%">
+        <img class="mySlides img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_03.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-content w3-section img__mo">
+        <img class="mySlides img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_01_m.jpg" style="width:100%">
+        <img class="mySlides img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_02_m.jpg" style="width:100%">
+        <img class="mySlides img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_03_m.jpg" style="width:100%">
+      </div>
+
+      <div class="main_img_wrap">
+
+        
+          <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_cont_01_bg.jpg">
+          <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_cont_02_bg.jpg">
+          <img class="img__pc" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_cont_03_bg.jpg">
+
+          <img class="img__mo" src="https://yanolja001.godohosting.com/pair/promotion/2305/2305_mro_thankspromotion_cont_mo.jpg">
+      </div>
+
+
+
+      <div class="bcdlist" style="padding-top:70px;">
+        <img class="img__pc" src="../imgs/2404_event_product.jpg" alt="">
+        <img class="img__mo" src="../imgs/product_1_m.jpg" alt="">
+    </div>
+
+
+
+  <div class="mro_footer">
+    <img class="img__pc" src="../imgs/mro_footer.jpg" alt="mro_pc_fotter">
+    <img class="img__mo" src="../imgs/mro_footer_m.jpg" alt="mro_mo_fotter">
+</div>  
+</div>
+  
+  <!--웹 폰트 -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'chk7zur',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  
+  <script>
+  $(document).ready(function() {
+      // 탭 클릭 시 해당 섹션의 위치로 스크롤
+      $('.section_wrap .section_bg .section li a').on('click', function(e) {
+          e.preventDefault();
+          console.log("Tab clicked!");
+          
+          // 클릭한 탭에 대응하는 섹션의 위치로 스크롤
+          var targetId = $(this).data('sectionslet');
+          var targetSection = $('[data-sectionslet-around="' + targetId + '"]');
+          $('html, body').animate({
+              scrollTop: targetSection.offset().top
+          }, 500);
+      });
+  });
+  </script>
+  
+  
+  <script>
+  $(window).on('scroll', function() {
+      console.log("Page scrolled!");
+  });
+  </script>
+  
+  <style>
+    @media (max-width: 767px){
+        .img__mo{display: block;  width: 100%;}
+        .img__pc{display: none;}
+        .title h3 {font-size: 8vw;}
+        .title h4 {font-size: 4vw;}
+        .break::after { content: "\A"; white-space: pre; display: block;}
+        .tab_wrap .tab_bg .tab li a {font-size: 3.5vw; line-height: 2.5vw; display: table-cell; text-align: center; vertical-align: middle;}
+        .tab_wrap .tab_bg .tab li { display: table; height: 76px;}
+        .box_wrap {margin: 0 auto; position: relative;}
+	.section_wrap { width: 100%; overflow: hidden; position: relative;}
+	.section_wrap .section_bg {  width: 100%;  background-color: #333;  position: sticky;  top: 0;  z-index: 99;}
+	.section_wrap .section_bg .section {  margin: 0 auto; display: flex;  height: 7em;  line-height: 7em; align-items:center;}
+	.section_wrap .section_bg .section li {  flex: 1;  font-size: 1.5em;  font-weight: 300;  border-right: 2px #555 solid; text-align: center;  cursor: pointer; height:100%;}
+	.section_wrap .section_bg .section li:first-child { flex: 1;  text-align: center;  cursor: pointer;  border-left: 2px #555 solid;  box-sizing: border-box;}
+	.section_wrap .section_bg .section li a { color: #555; display:block; line-height:1.3em; padding-top:1em;}
+	.section_wrap .section_bg .section .on { /* background-color: #fff;  font-weight: 700;*/}
+	.section_wrap .section_bg .section .on a {  color: #fff;}
+    }
+  </style>
+  
+  
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2408 recycling uncycling 페이지</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    *{margin: 0; padding: 0;}
+    body {font-family: "pretendard", sans-serif;}
+    .img__pc{display: block; width: 100%;}
+    .img__mo{display: none;}
+    :root {--swiper-navigation-size: 44px;}
+  
+    @media (min-width:768px){
+    .samplePage { height: 100%;}
+    .sampleArea { overflow: hidden; width: 100%; height: 100%;}
+    .sampleArea>.head { padding: 8px 0; background: #32343e;}
+    .sampleArea>.head .inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; align-items: center;}
+    [class^=btn] { -webkit-transition-duration: .3s; transition-duration: .3s; -webkit-transition-property: background,color,border; transition-property: background,color,border; -webkit-transition-timing-function: ease; transition-timing-function: ease; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].active { background: #191a1f;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameDesktop { margin: 0 4px 0 0;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameDesktop:before { background-image: url(../imgs/ico_frame_desktop.png); background-size: 20px 17px;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame]:before { content: ""; display: block; position: absolute; left: 0; top: 0; z-index: 10; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameMobile { margin: 0 0 0 4px;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameMobile:before { background-image: url(../imgs/ico_frame_mobile.png); background-size: 14px 20px;}
+    .sampleArea>.content { position: relative; width: 100%; height: calc(100% - 61px);}
+    .sampleArea>.content.viewDesktop .previewContent { left: 0; top: 0; max-width: 100%; max-height: 100%;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame] { display: inline-block; position: relative; overflow: hidden; width: 40px; height: 40px; border-radius: 4px; overflow: hidden; text-indent: 150%; white-space: nowrap; font-size: 1px; line-height: 0; color: transparent;}
+    .sampleArea>.content .previewContent { position: absolute; width: 100%; height: 100%; -webkit-transition: all .6s ease; transition: all .6s ease;}
+    .sampleArea>.content .previewContent iframe { position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    button{background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer}
+    .mo{display: none}
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+      <div class="previewContent">
+          <div id="app">
+              <div class="sampleArea">
+                  <div class="head">
+                      <div class="inner">
+                          <div class="deviceFrame">
+                              <button class="btnFrameDesktop active" id="btnFrameDesktop"></button>
+                              <a href="https://popo5287.github.io/homepage/link/2408_event_2.html" class="mobile-device">
+                                  <button class="btnFrameMobile" id="btnFrameMobile"></button>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="viewDesktop">
+    <div class="mro_header">
+        <img class="img__pc" src="../imgs/mro_header.jpg">
+        <img class="img__mo" src="../imgs/mro_header_m.jpg">
+    </div>
+  </div>
+
+  <style>
+  @import url('font/pretendardVariable.css');
+
+  @font-face {
+    font-family: 'Pretendard';
+    font-style: normal;
+    src: url('font/PretendardVariable.woff2') format('woff2-variations');
+    font-weight: 100 900;
+  }
+	  
+  .sub_content{width:100%; padding:0;}
+	  
+  body {font-family: "pretendard", sans-serif; margin: 0; padding: 0;}
+  :root {
+    --ti-cursor-margin-left:0.1em;
+    /**--ti-cursor-color:#f53f79;**/
+  }
+  h1{text-align: center;}
+  .tab {
+    display: flex;
+    justify-content: center;
+  }
+	  .scroll_wrap {display:none;}
+  /* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 60px;
+    transition: 0.3s;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    margin: 10px;
+    font-weight: 600;
+    color: #494136;
+    border: 1px solid #494136;
+    /* width: 380px; */
+    /* height: 66px; */
+}
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {background-color: #fff0e0;}
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #494136;
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  /* Style the tab content */
+  .on{display: block;}
+  .tabcontent {display: none;}
+  .tab_style{/*max-width: 840px; padding: 80px 50px; margin:50px auto;
+    border: 1px solid #EFEFEF;
+    background: #FBFBFB;
+    border-radius: 30px;*/
+    text-align: center;}
+
+  #title{margin: 0;
+    padding: 120px 0 80px;}
+  .table_tab{margin: 0 auto;}
+  .tab_style>h3{color:#494136;}
+  h3{font-weight: 600; font-size: 30px;}
+  .main02{height: 450px; text-align: center;}
+  .main02>img {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .main01{background-image: url(https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_main01.png);
+    background-position: center; background-size: 100%; height: 800px; background-repeat: no-repeat;}
+
+    .main02-1 {
+    background-image: url(https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_main03.png);
+    background-position: center;
+    background-size: 100%;
+    height: 1500px;
+    background-repeat: no-repeat;
+}
+
+.img-center {
+    text-align: center;
+    margin-top: 50px;
+    width: 1200px;
+    margin: 50px auto 0;
+}
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;}
+
+  .main03{padding: 100px 0 150px; background: #D0BFA3;}
+  .img-center>img{margin-bottom: 50px;}
+  [data-scroll]{
+      opacity: 0;
+      will-change: transform, scale, opacity;
+      transition:all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    [data-scroll='in']{
+      opacity: 1;
+    }
+
+    [data-scroll='out']{
+      opacity: 0;
+    }
+
+    .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+	  
+	.container>p {
+		font-size:14px;
+    margin: 0 auto;
+    padding-top: 10px;
+		padding-bottom:50px;
+}
+    .button {
+    border: none;
+    color: #fff;
+    background: #b93736;
+    text-align: center;
+    border-radius: 50px;
+    padding: 30px 0px;
+    font-weight: 700;
+    font-size: 24px;
+}
+	  
+	  .button {
+    border: none;
+    color: #fff;
+    background: #b93736;
+    text-align: center;
+    border-radius: 50px;
+    padding: 30px 150px;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+	  .player{outline:none; border:0; }
+	  .photo{width:1050px; height:auto;}
+	  
+	  .lottie{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;}
+
+
+  </style>
+
+  <div class="pc">
+  <div class="main01"></div>
+  <div class="main02">
+    <div style="margin-top: 100px;">
+		<video class="player" autoplay="" muted="" loop="" playsinline="">
+		  <source src="https://yanolja001.godohosting.com/pair/promotion/2407/type-it-1.mp4" type="video/mp4">
+		</video>
+	</div>
+    <div><img src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_egs_coupon%26truck.png" style="margin-right:46px;"></div>
+  </div>
+  <div class="main02-1"></div>
+  <div class="main03">
+    <div class="table_tab">
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">헌 비누 주시고 5,000원 쿠폰 받으세요</button>
+		<button class="tablinks" onclick="openCity(event, 'Paris')" >헌 침구 주시고 10% 할인 쿠폰 받으세요</button>
+      </div>
+		
+	<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+		
+	      <div id="London" class="tabcontent">
+		<div class="lottie">
+		  <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
+		  </div>
+        <div class="img-center">        
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_01.png" alt="">
+		  <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_02.png" alt="">
+		  <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_03.png" alt="">
+		  <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_04.png" alt="">	
+        </div>
+		<div class="container">
+          <button onclick="location.href='https://yanoljamro.com/board/write.php?&bdId=resoap'" class="button">헌 비누 회수 신청 하기</button>
+        </div>
+      </div>
+      
+      <div id="Paris" class="tabcontent on">
+		<div class="lottie">
+		  <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
+		  </div>
+        <div class="img-center">
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_01.png" alt="">
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_02.png" alt="">
+		        <div class="container">
+        </div>
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_03.png" alt="">
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_04.png" alt="">
+        </div>
+        <div class="container">
+          <button onclick="location.href='https://yanoljamro.com/board/write.php?&bdId=relinen'" class="button">헌 침구/타올 회수 신청 문의 및 접수하기 [클릭]</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+      
+      // 해당 탭의 첫 번째 이미지를 바로 로드
+      const firstImage = document.querySelector(`#${cityName} .photo`);
+      if (firstImage && !firstImage.src) {
+        firstImage.src = firstImage.dataset.src;
+      }
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    
+      </script>
+    
+    
+      
+      <script>
+    ScrollOut({
+      targets: '.photo',
+      onShown: function(el) {
+        if (!el.src) {
+          el.src = el.dataset.src;
+        }
+      }
+    });
+    
+      </script>
+  </div>
+
+
+
+
+  <div class="mo">
+      <div class="main01">
+      <img src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_main01_mo.png"></div>
+      <div class="main02">
+        <div>
+        <video class="player" autoplay muted loop playsinline style="width:100%;">
+          <source src="https://yanolja001.godohosting.com/pair/promotion/2407/type-it-mo.mp4" type="video/mp4">
+        </video>
+      </div>
+        <div><img src="https://yanolja001.godohosting.com/pair/promotion/2407/coupon%26truck_mo.png" style="width:80vw;"></div>
+      </div>
+      <div class="main02-1">
+      <img src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_main03_mo.png"></div>
+      <div class="main03">
+        <div class="table_tab">
+          <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London-m')" id="defaultOpen1">헌 비누 주시고<br>5,000원 쿠폰 받으세요</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris-m')" >헌 침구/타올 주시고<br>10% 할인 쿠폰 받으세요</button>
+    
+          </div>
+          
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+        
+        <div id="London-m" class="tabcontent-m">
+          <div class="lottie">
+          <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
+          </div>
+            <div class="img-center">        
+              <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_mo_01.png" alt="">
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_mo_02.png" alt="">
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_mo_03.png" alt="">
+          <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab2_scroll_mo_04.png" alt="">	
+            </div>
+        <div class="container">
+              <button onclick="location.href='https://yanoljamro.com/board/write.php?&bdId=resoap'" button class="button">헌 비누 회수 신청 하기</button>
+            </div>
+          </div>
+        
+          <div id="Paris-m" class="tabcontent-m on">
+          <div class="lottie">
+          <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
+          </div>
+            <div class="img-center">
+              <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_mo_01.png" alt="">
+              <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_mo_02.png" alt="">
+                  <div class="container">
+            </div>
+              <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_mo_03.png" alt="">
+              <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_mo_04.png" alt="">
+            </div>
+            <div class="container">
+              <button onclick="location.href='https://yanoljamro.com/board/write.php?&bdId=relinen'" button class="button">헌 침구/타올 회수 신청 문의 및 접수하기 [클릭]</button>
+            </div>
+          </div>     
+        </div>
+      </div>
+  </div>
+
+  <style>
+    @media (max-width: 767px){
+      .pc{display: none;}
+        .img__mo{display: block;  width: 100%;}
+        .img__pc{display: none;}
+        .sub_content{width:100%; padding:0;}
+        
+      body {font-family: "pretendard", sans-serif; margin: 0; padding: 0;}
+      :root {
+        --ti-cursor-margin-left:0.1em;
+        /**--ti-cursor-color:#f53f79;**/
+      }
+      h1{text-align: center;}
+      .tab { display: flex; justify-content: center; margin: 10px;}
+        .main01>img, .main02-1>img{width:100%;}
+        .main02-1{font-size:0px; height: 100%;}
+      /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 13px 20px;
+        transition: 0.3s;
+        font-size: 0.85rem;
+        border-radius: 50px;
+        line-height: 1.1rem;
+        margin: 4px;
+        font-weight: 600;
+        color: #494136;
+        border: 1px solid #494136;
+    }
+      
+      /* Change background color of buttons on hover */
+      .tab button:hover {background-color: #fff0e0;}
+      
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #494136;
+        color: #fff;
+        font-weight: 700;
+      }
+      
+      /* Style the tab content */
+      .on{display: block;}
+      .tabcontent {display: none;}
+      .tab_style{/*max-width: 840px; padding: 80px 50px; margin:50px auto;
+        border: 1px solid #EFEFEF;
+        background: #FBFBFB;
+        border-radius: 30px;*/
+        text-align: center;}
+    
+      #title{margin: 0;
+        padding: 120px 0 80px;}
+      .table_tab{margin: 0 auto;}
+      .tab_style>h3{color:#494136;}
+      h3{font-weight: 600; font-size: 30px;}
+      .main02{text-align: center; margin:100px 0; height: 100%;}
+      .main02>img {
+        max-width: 100%;
+        text-align: center;
+      }
+    
+    
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;}
+    
+      .main03 {padding: 14vw 0; background: #D0BFA3;}
+      .img-center { text-align: center; margin-top: 5vw; width: 100%; margin: 50px suto;}
+      .img-center>img { margin-bottom: 5vw;}
+      [data-scroll]{
+          opacity: 0;
+          will-change: transform, scale, opacity;
+          transition:all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    
+        [data-scroll='in']{
+          opacity: 1;
+        }
+    
+        [data-scroll='out']{
+          opacity: 0;
+        }
+    
+       .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+        
+      .container>p {
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .button {
+        border: none;
+        color: #fff;
+        background: #b93736;
+        text-align: center;
+        border-radius: 50px;
+        padding: 21px 20px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        width: 88%;
+        margin: 0 auto;
+    }
+        .player{outline:none; border:0;}
+        .photo{width:92vw; height:auto;}
+            .lottie{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    }
+  </style>
+  
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen1" and click on it
+    document.getElementById("defaultOpen1").click();
+    </script>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontentItems, tablinks;
+    tabcontentItems = document.getElementsByClassName("tabcontent-m");
+    for (i = 0; i < tabcontentItems.length; i++) {
+        tabcontentItems[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+  
+  </script>
+
+  <script>
+    ScrollOut({
+      targets: '.photo',
+      //once: true.
+      onShown : function(el) {
+        if (!el.src){
+          el.src = el.dataset.src;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -121,6 +121,7 @@
     border-radius: 30px;*/
     text-align: center;}
 
+
   #title{margin: 0;
     padding: 120px 0 80px;}
   .table_tab{margin: 0 auto;}
@@ -139,7 +140,7 @@
     background-image: url(https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_main03.png);
     background-position: center;
     background-size: 100%;
-    height: 1500px;
+    height: 1395px;
     background-repeat: no-repeat;
 }
 
@@ -213,6 +214,13 @@
     justify-content: center;
     margin-top: 60px;}
 
+    video {
+    outline: none;
+    border: 0;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
 
   </style>
 
@@ -230,13 +238,13 @@
   <div class="main03">
     <div class="table_tab">
       <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">헌 비누 주시고 5,000원 쿠폰 받으세요</button>
-		<button class="tablinks" onclick="openCity(event, 'Paris')" >헌 침구 주시고 10% 할인 쿠폰 받으세요</button>
+        <button class="tablinks" onclick="openCity(event, 'Seoul')" id="defaultOpen">헌 비누 주시고 5,000원 쿠폰 받으세요</button>
+		<button class="tablinks" onclick="openCity(event, 'Geounggi')" >헌 침구 주시고 10% 할인 쿠폰 받으세요</button>
       </div>
 		
 	<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 		
-	      <div id="London" class="tabcontent">
+	      <div id="Seoul" class="tabcontent">
 		<div class="lottie">
 		  <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
 		  </div>
@@ -251,7 +259,7 @@
         </div>
       </div>
       
-      <div id="Paris" class="tabcontent on">
+      <div id="Geounggi" class="tabcontent on">
 		<div class="lottie">
 		  <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
 		  </div>
@@ -264,50 +272,11 @@
           <img class="photo" src="https://yanolja001.godohosting.com/pair/promotion/2407/2407_mro_tab1_scroll_04.png" alt="">
         </div>
         <div class="container">
-          <button onclick="location.href='https://yanoljamro.com/board/write.php?&bdId=relinen'" class="button">헌 침구/타올 회수 신청 문의 및 접수하기 [클릭]</button>
+          <button onclick="location.href='https://yanoljamro.com/board/write.php?&bdId=relinen'" class="button">헌 침구/타올 회수 신청 문의 및 접수하기</button>
         </div>
       </div>
     </div>
   </div>
-  <script>
-    function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-      
-      // 해당 탭의 첫 번째 이미지를 바로 로드
-      const firstImage = document.querySelector(`#${cityName} .photo`);
-      if (firstImage && !firstImage.src) {
-        firstImage.src = firstImage.dataset.src;
-      }
-    }
-    
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-    
-      </script>
-    
-    
-      
-      <script>
-    ScrollOut({
-      targets: '.photo',
-      onShown: function(el) {
-        if (!el.src) {
-          el.src = el.dataset.src;
-        }
-      }
-    });
-    
-      </script>
   </div>
 
 
@@ -329,14 +298,14 @@
       <div class="main03">
         <div class="table_tab">
           <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London-m')" id="defaultOpen1">헌 비누 주시고<br>5,000원 쿠폰 받으세요</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris-m')" >헌 침구/타올 주시고<br>10% 할인 쿠폰 받으세요</button>
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpenMobile">헌 비누 주시고<br>5,000원 쿠폰 받으세요</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')" >헌 침구/타올 주시고<br>10% 할인 쿠폰 받으세요</button>
     
           </div>
           
         <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
         
-        <div id="London-m" class="tabcontent-m">
+        <div id="London" class="tabcontent-m">
           <div class="lottie">
           <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
           </div>
@@ -351,7 +320,7 @@
             </div>
           </div>
         
-          <div id="Paris-m" class="tabcontent-m on">
+          <div id="Paris" class="tabcontent-m on">
           <div class="lottie">
           <dotlottie-player src="https://lottie.host/6e9effeb-fbd0-4040-a0bb-45589b292421/2VFAKO8qP1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
           </div>
@@ -373,6 +342,9 @@
 
   <style>
     @media (max-width: 767px){
+
+
+      .main01{height: auto;} 
       .pc{display: none;}
         .img__mo{display: block;  width: 100%;}
         .img__pc{display: none;}
@@ -493,42 +465,7 @@
     }
   </style>
   
-  <script>
-    function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    
-    // Get the element with id="defaultOpen1" and click on it
-    document.getElementById("defaultOpen1").click();
-    </script>
 
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontentItems, tablinks;
-    tabcontentItems = document.getElementsByClassName("tabcontent-m");
-    for (i = 0; i < tabcontentItems.length; i++) {
-        tabcontentItems[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-  
-  </script>
 
   <script>
     ScrollOut({
@@ -541,5 +478,50 @@ function openCity(evt, cityName) {
       }
     });
   </script>
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    
+    // Get all elements with class="tabcontent-m" and hide them
+    tabcontent_m = document.getElementsByClassName("tabcontent-m");
+    for (i = 0; i < tabcontent_m.length; i++) {
+      tabcontent_m[i].style.display = "none";
+    }
+
+    // Remove the class "active" from all tablinks
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  if (window.innerWidth < 768) {
+    // 모바일일 때
+    document.getElementById("defaultOpenMobile").click();
+} else {
+    // 데스크탑일 때
+    document.getElementById("defaultOpen").click();
+}
+  
+  // Set default tab open for Mobile (Paris)
+  window.onload = function() {
+    if (window.innerWidth < 768) {
+      document.getElementById("Paris").style.display = "block";
+    } else {
+      document.getElementById("Seoul").style.display = "block";
+    }
+  };
+</script>
 </body>
-</html>
+</html> 

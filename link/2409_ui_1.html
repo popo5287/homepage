@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2409 비품넷 회원혜택 페이지</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    *{margin: 0; padding: 0;}
+    body {font-family: "pretendard", sans-serif;}
+    .img__pc{display: block; width: 100%;}
+    .img__mo{display: none;}
+    :root {--swiper-navigation-size: 44px;}
+  
+    @media (min-width:768px){
+    .samplePage { height: 100%;}
+    .sampleArea { overflow: hidden; width: 100%; height: 100%;}
+    .sampleArea>.head { padding: 8px 0; background: #32343e;}
+    .sampleArea>.head .inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; align-items: center;}
+    [class^=btn] { -webkit-transition-duration: .3s; transition-duration: .3s; -webkit-transition-property: background,color,border; transition-property: background,color,border; -webkit-transition-timing-function: ease; transition-timing-function: ease; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].active { background: #191a1f;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameDesktop { margin: 0 4px 0 0;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameDesktop:before { background-image: url(../imgs/ico_frame_desktop.png); background-size: 20px 17px;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame]:before { content: ""; display: block; position: absolute; left: 0; top: 0; z-index: 10; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameMobile { margin: 0 0 0 4px;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame].btnFrameMobile:before { background-image: url(../imgs/ico_frame_mobile.png); background-size: 14px 20px;}
+    .sampleArea>.content { position: relative; width: 100%; height: calc(100% - 61px);}
+    .sampleArea>.content.viewDesktop .previewContent { left: 0; top: 0; max-width: 100%; max-height: 100%;}
+    .sampleArea>.head .inner .deviceFrame [class^=btnFrame] { display: inline-block; position: relative; overflow: hidden; width: 40px; height: 40px; border-radius: 4px; overflow: hidden; text-indent: 150%; white-space: nowrap; font-size: 1px; line-height: 0; color: transparent;}
+    .sampleArea>.content .previewContent { position: absolute; width: 100%; height: 100%; -webkit-transition: all .6s ease; transition: all .6s ease;}
+    .sampleArea>.content .previewContent iframe { position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    button{background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer}
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+      <div class="previewContent">
+          <div id="app">
+              <div class="sampleArea">
+                  <div class="head">
+                      <div class="inner">
+                          <div class="deviceFrame">
+                              <button class="btnFrameDesktop active" id="btnFrameDesktop"></button>
+                              <a href="https://popo5287.github.io/homepage/link/2409_ui_1_mo.html" class="mobile-device">
+                                  <button class="btnFrameMobile" id="btnFrameMobile"></button>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="viewDesktop">
+    <style>
+      @import url('font/pretendardVariable.css');
+      
+      @font-face {
+        font-family: 'Pretendard';
+        font-style: normal;
+        src: url('font/PretendardVariable.woff2') format('woff2-variations');
+        font-weight: 100 900;
+      }
+      body {font-family: "pretendard", sans-serif;}
+      *{margin:0; padding:0;}
+      ul{list-style:none;}
+      a{text-decoration:none; color:#333;}
+      th, td, input, select, textarea, button {font-size: 14px; line-height: 1.5; font-family: pretendard, Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;  color: #333;}
+      button { border: 0 none; background-color: transparent; cursor: pointer;}
+      .hr{height: 1px; background-color: #D9D9D9; border: none;}
+      
+      .sub_content{width:1260px; padding:0; margin: 0 auto;}
+      
+      /**button**/
+      .button1{ width: 280px; height: 77px; border-radius: 50px; font-size: 20px; font-weight: 600; color: #473fa1; border: 1px solid #473fa1;  display: flex;  align-items: center; justify-content: center; gap: 5px;}
+      .button2{ width: 370px; height: 77px; border-radius: 50px; font-size: 20px; font-weight: 600; color: #473fa1; border: 1px solid #473fa1;  display: flex;  align-items: center; justify-content: center; gap: 5px;}
+      .button3{ width: 410px; height: 77px; border-radius: 50px; font-size: 20px; font-weight: 600; color: #473fa1; border: 1px solid #473fa1;  display: flex;  align-items: center; justify-content: center; gap: 5px;}
+      .button_center{display: flex; align-items: center; justify-content: center; flex-direction: column;}
+      .button_center_2{display: flex; align-items: center; justify-content: center; gap:20px; padding: 100px 0 0;}
+      
+      /**coupon**/
+      .coupon-by-2 {display: flex; justify-content: space-around; gap: 80px;}
+      .coupon-by-1 > img {padding-top: 18px;}
+      .coupon_tip_detail{display: none;}
+      
+      .main-title { display: flex; gap: 10px; flex-direction: column;}	
+      .main-title-1{ gap: 50px;  background: #fbfbfb;  padding: 100px 0;  display: flex;  flex-direction: column; align-items:center;}
+      .main-title-2{ gap: 50px; padding: 100px 0;  display: flex;  flex-direction: column; align-items:center; }
+      .main-title-3{padding: 100px 0;  display: flex;  flex-direction: column; align-items:center;}
+      
+      .guide-wrap{display: flex; justify-content: center; gap:40px; padding:60px 0 20px;}
+      .guide{width: 496px;}
+      .img-flex{display: flex; justify-content: center; padding-top: 40px;}
+      .membersip-zip {padding: 100px 0; gap: 100px; display: grid;}
+      
+      /**table**/
+      .table-txt {display: flex; flex-direction: column; gap: 20px;}
+      .table-wrap{display:table; border-collapse:collapse;}
+      .txt-s{display: flex; justify-content: center; align-items: center; flex-direction: column;  gap: 5px;}
+      .table-wrap:nth-child(2)>.table {border-top:none;}
+      .membership-table{display: flex; gap: 60px; flex-direction: column;}
+      .notice{display: flex; flex-direction: column;  gap: 22px; padding: 50px; background-color: #FBFBFB;}
+      
+      /**table-3**/
+      .b2b_table {justify-content: space-around; display: flex;}
+      .table-3{width: 420px; height: 320px; border: 1px solid #d9d9d9; display: table-cell; table-layout: fixed;}
+      .table-3 > img {width: 120px; height: 120px;}
+      .table-cell-3 {display: flex; justify-content: center; align-items: center; flex-direction: column;  width: 100%; height: 100%;  gap: 10px;  color: #333;}
+      .table-wrap:nth-child(2)>.table-3 {border-top:none;}
+      
+      /**table-6**/
+      .table-6{width: 210px; border: 1px solid #d9d9d9; display: table-cell; table-layout: fixed; }
+      .table-6 > img {width: 80px; height: 80px;}
+      .table-cell-6 {display: flex; justify-content: center; align-items: center; flex-direction: column; color: #333; gap: 20px; padding: 50px 0px;}
+      .table-wrap:nth-child(n+2)>.table-6 {border-top:none;}
+      
+      /**table-4**/
+      .table-4:nth-child(1){width: 276px;}
+      .table-4:nth-child(2){width: 294px;}
+      .table-4:nth-child(3){width: 398px;}
+      .table-4:nth-child(4){width: 294px;}
+      .table-4{border: 1px solid #d9d9d9; display: table-cell; table-layout: fixed; }
+      .table-cell-4 {display: flex; justify-content: center; align-items: center; flex-direction: column; color: #333; gap: 20px; padding: 50px 0px;}
+      .table-wrap:nth-child(n+2)>.table-4 {border-top:none;}
+      
+      /**table-7**/
+      .table-7:nth-child(2n){width: 12px;}
+      .table-7{width: 306px;}
+      .table-cell-7>img{width: 120px; height: 120px;}
+      .table-7 > img {width: 12px; height: 30px;}
+      .table-7{ display: table-cell; table-layout: fixed; }
+      .table-cell-7 {display: flex; justify-content: center; align-items: center; flex-direction: column; color: #333; gap: 20px; padding: 50px 0px;}
+      
+      /**tab**/
+      .tab_menu .list .cont { display: none;  /*position: absolute; top: 25px; left: 0;*/}
+      .tab_menu .list li.is_on .cont{display:block;}
+      .tab_menu .list li.is_on .btn { color: #fff;  font-weight: 700;}
+      .tab_menu .list .btn {font-size: 18px; display: block; width: 211px; height: 72px; text-align: center; line-height: 72px;}
+      .tab_menu .list { /* overflow: hidden; */ display: flex;}
+      .tab_menu .list li.is_on { background-color: #473fa1; border:1px solid #473fa1;}
+      .tab_menu .list li { /* float: left; */ /* margin-right: 14px; */ border-top: 1px solid #d9d9d9;  border-bottom: 1px solid #d9d9d9; border-left: 1px solid #d9d9d9; width: 210px; height: 70px;  display: flex;  justify-content: center;  align-items: center;}
+      .tab_menu .list li:nth-last-child(1) { border-right: 1px solid #d9d9d9;}
+      
+      /**타이틀 대소 2줄**/
+      .txt-wrap {display: flex; flex-direction: column; gap: 15px;}
+      
+      
+      .t-a-c{text-align:center;}
+      .t-c-b{color:#473fa1;}	
+      .t-c-g{color:#666;}	
+      .t-c-lg{color: #949494;}
+      .b-c-b{background-color: #F6FAFB;}
+      .b-c-g{background-color: #F8F8F8;}
+      .l-h{line-height: 160%;}
+      .p-t-100{padding-top: 100px;}
+      .p-t-60{padding-top: 60px;}
+      .p-b-50{padding-bottom:50px;}
+      .p-b-100{padding-bottom:100px;}
+      .b-t-g{ border-top:1px solid #d9d9d9; }
+      .title-1 { font-size: 45px;  font-weight: 600; letter-spacing: -0.03em; line-height: 140%;}
+      .title-2-b { font-size: 30px; font-weight: 700; letter-spacing: -0.03em; line-height: 140%;}
+      .title-2 { font-size: 30px; font-weight: 300; letter-spacing: -0.03em; line-height: 140%;}
+      .title-3 { font-size: 26px; font-weight: 600; letter-spacing: -0.03em; line-height: 140%;}
+      .title-4 { font-size: 24px; font-weight: 200; letter-spacing: -0.03em; line-height: 130%;}
+      .title-4-b { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; line-height: 130%;}	
+      .title-5-b { font-size: 20px; font-weight: 600; letter-spacing: -0.03em; line-height: 140%;}
+      .title-5 { font-size: 20px; font-weight: 300; letter-spacing: -0.03em; line-height: 140%;}
+      .title-6 { font-size: 18px; font-weight: 300; letter-spacing: -0.03em; line-height: 140%;}
+      .title-6-b { font-size: 18px; font-weight: 600; letter-spacing: -0.03em; line-height: 140%;}
+      
+      </style>
+      <div><img style="width: 100vw;" src="../imgs/bp-header.png"></div>
+      <div class="sub_content">
+        <div class="membersip-zip">
+          <div class="main-title">
+            <div class="title-1 t-a-c">BIPUMNET MEMBERSHIP</div>
+            <div class="title-6 t-a-c">비품넷 가입하고 혜택받기</div>
+          </div><!--main-title-->
+          
+          <div class="table-w-3">
+            <div class="table-wrap">
+              <div class="table-3">	
+                <div class="table-cell-3">
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/membership-1.svg" alt="membership SVG" />
+                  <div class="table-txt">
+                    <div class="title-3 t-a-c">COUPON & REWARD</div>
+                    <div class="title-6 t-a-c">멤버십 쿠폰 및 구매 적립금 혜택</div>
+                  </div>	
+                </div>
+              </div>
+              <div class="table-3">	
+                <div class="table-cell-3">
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/membership-2.svg" alt="membership SVG" />
+                  <div class="table-txt">
+                    <div class="title-3 t-a-c">GIFTS</div>
+                    <div class="title-6 t-a-c">구매 금액별 추가 할인 쿠폰 증정</div>
+                  </div>	
+                </div>
+              </div>
+              <div class="table-3">	
+                <div class="table-cell-3">
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/membership-3.svg" alt="membership SVG" />
+                  <div class="table-txt">
+                    <div class="title-3 t-a-c">NEW MEMBER COUPON</div>
+                    <div class="title-6 t-a-c">신규 회원 쿠폰 혜택</div>
+                  </div>	
+                </div>
+              </div>		
+            </div>
+            <div class="table-wrap">
+              <div class="table-3">	
+                <div class="table-cell-3">
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/membership-4.svg" alt="membership SVG" />
+                  <div class="table-txt">
+                    <div class="title-3 t-a-c">KAKAO CHANNEL COUPON</div>
+                    <div class="title-6 t-a-c">카카오톡 채널 추가 시 쿠폰 발급</div>
+                  </div>	
+                </div>
+              </div>
+              <div class="table-3">	
+                <div class="table-cell-3">
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/membership-5.svg" alt="membership SVG" />
+                  <div class="table-txt">
+                    <div class="title-3 t-a-c">APP COUPON</div>
+                    <div class="title-6 t-a-c">비품넷 앱 다운로드 시 쿠폰 발급</div>
+                  </div>	
+                </div>
+              </div>
+              <div class="table-3">	
+                <div class="table-cell-3">
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/membership-6.svg" alt="membership SVG" />
+                  <div class="table-txt">
+                    <div class="title-3 t-a-c">NEW MEMBER POINT</div>
+                    <div class="title-6 t-a-c">신규 회원 적립금 혜택</div>
+                  </div>	
+                </div>
+              </div>		
+            </div>
+          </div><!--table-w-3-->
+      
+          <div class="wrap">
+            <div class="tab_menu">
+            <ul class="list">
+              <li class="is_on"><a href="#tab1" class="btn">등급별 혜택</a></li>
+              <li><a href="#tab2" class="btn">신규회원 혜택</a></li>
+              <li><a href="#tab3" class="btn">사업자회원 혜택</a></li>
+              <li><a href="#tab4" class="btn">추가 할인 혜택</a></li>
+              <li><a href="#tab5" class="btn">도매회원 혜택</a></li>
+              <li><a href="#tab6" class="btn">쿠폰 사용 방법</a></li>		
+            </ul>
+            </div><!--tab_menu-->
+      
+            <div class="tab_content">
+              <div id="tab1" class="cont">
+                <div class="main-title-3">												
+                  <!--{ ? gd_is_login() === false }-->
+                  <div class="title-2-b t-a-c p-b-50">매달 등급별 추가 혜택을 확인하세요!<br>로그인 하고 회원님의 등급 혜택을 확인해 보세요!<br></div>
+                  <button type="button" onclick="location.href='https://www.bipum.net/member/login.php'" class="button1">로그인 <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-go.svg"></button>
+                  <!--{ : }-->
+                  
+                  <!--{ / }-->												
+                </div>
+                
+                <div class="membership-table p-t-100 b-t-g">
+                  <div class="title-2-b t-a-c">한 눈에 보는 멤버십 혜택</div>
+                  <div class="table-w-6">
+                    <div class="table-wrap">
+                      <div class="table-6 b-c-b">	
+                        <div class="table-cell-6">
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/level-6.png" />
+                          <div class="title-4-b t-a-c">VVIP</div>
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">최근 3개월 누적 구매액</div>
+                            <div class="title-5-b t-a-c">500만원 이상</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/level-5.png" />
+                          <div class="title-4-b t-a-c">VIP</div>
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">최근 3개월 누적 구매액</div>
+                            <div class="title-5-b t-a-c">300만원 이상</div>
+                          </div>	
+                        </div>
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/level-4.png" />
+                          <div class="title-4-b t-a-c">골드</div>
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">최근 3개월 누적 구매액</div>
+                            <div class="title-5-b t-a-c">100만원 이상</div>
+                          </div>	
+                        </div>
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/level-3.png" />
+                          <div class="table-txt">
+                            <div class="title-4-b t-a-c">실버</div>
+                            <div class="txt-s">
+                              <div class="title-6 t-c-g t-a-c">최근 3개월 누적 구매액</div>
+                              <div class="title-5-b t-a-c">30만원 이상</div>
+                            </div>
+                          </div>	
+                        </div>
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/level-2.png" />
+                          <div class="table-txt">
+                            <div class="title-4-b t-a-c">브론즈</div>
+                            <div class="txt-s">
+                              <div class="title-6 t-c-g t-a-c">최근 3개월 누적 구매액</div>
+                              <div class="title-5-b t-a-c">5만원 이상</div>
+                            </div>
+                          </div>	
+                        </div>
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/level-1.png" />
+                          <div class="table-txt">
+                            <div class="title-4-b t-a-c">일반</div>
+                            <div class="txt-s">
+                              <div class="title-6 t-c-g t-a-c">최근 3개월 누적 구매액</div>
+                              <div class="title-5-b t-a-c">5만원 이하</div>
+                            </div>
+                          </div>	
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="table-wrap">
+                      <div class="table-6 b-c-b">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">상품별 기본 할인율</div>
+                            <div class="title-5-b t-a-c">+ 추가 7% 할인</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">상품별 기본 할인율</div>
+                            <div class="title-5-b t-a-c">+ 추가 6% 할인</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">상품별 기본 할인율</div>
+                            <div class="title-5-b t-a-c">+ 추가 5% 할인</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">상품별 기본 할인율</div>
+                            <div class="title-5-b t-a-c">+ 추가 3% 할인</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">상품별 기본 할인율</div>
+                            <div class="title-5-b t-a-c">+ 추가 2% 할인</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">상품별 기본 할인율</div>
+                            <div class="title-5-b t-a-c">+ 추가 1% 할인</div>
+                          </div>
+                        </div>	
+                      </div>
+                    </div>
+      
+                    <div class="table-wrap">
+                      <div class="table-6 b-c-b">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">구매금액의</div>
+                            <div class="title-5-b t-a-c">+ 추가 2% 적립</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">구매금액의</div>
+                            <div class="title-5-b t-a-c">+ 추가 2% 적립</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">구매금액의</div>
+                            <div class="title-5-b t-a-c">+ 추가 1% 적립</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">구매금액의</div>
+                            <div class="title-5-b t-a-c">+ 추가 1% 적립</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">구매금액의</div>
+                            <div class="title-5-b t-a-c">+ 추가 1% 적립</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6 t-c-g t-a-c">구매금액의</div>
+                            <div class="title-5-b t-a-c">+ 추가 1% 적립</div>
+                          </div>
+                        </div>	
+                      </div>
+                    </div>
+      
+                    <div class="table-wrap">
+                      <div class="table-6 b-c-b">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6-b t-a-c">월 정기 할인쿠폰</div>
+                            <div class="title-6 t-c-g t-a-c">(상품 할인 쿠폰)</div>
+                          </div>
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6-b t-a-c">월 정기 할인쿠폰</div>
+                            <div class="title-6 t-c-g t-a-c">(상품 할인 쿠폰)</div>
+                          </div>
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                        </div>		
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6-b t-a-c">월 정기 할인쿠폰</div>
+                            <div class="title-6 t-c-g t-a-c">(상품 할인 쿠폰)</div>
+                          </div>
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6-b t-a-c">월 정기 할인쿠폰</div>
+                            <div class="title-6 t-c-g t-a-c">(상품 할인 쿠폰)</div>
+                          </div>
+                          <img src="http://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/member-coupon.png">
+                        </div>		
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6-b t-a-c">월 정기 할인쿠폰</div>
+                            <div class="title-6 t-c-g t-a-c">(상품 할인 쿠폰)</div>
+                          </div>
+                        </div>	
+                      </div>
+                      <div class="table-6">	
+                        <div class="table-cell-6">
+                          <div class="txt-s">
+                            <div class="title-6-b t-a-c">월 정기 할인쿠폰</div>
+                            <div class="title-6 t-c-g t-a-c">(상품 할인 쿠폰)</div>
+                          </div>
+                        </div>	
+                      </div>
+                    </div>
+      
+                  </div>
+      
+                  <div class="notice">
+                    <div class="title-5-b">ⓘ 회원 등급별 혜택에 대한 안내</div>
+                    <div class="title-5 t-c-g l-h">
+                      · 회원 등급은 구매 실적에 따라 3개월 단위로 조정됩니다.<br>
+                      · 월 정기 할인쿠폰은 매월 첫 영업일에 일관 지급되며, [마이페이지]메뉴에서 확인하실 수 있습니다.<br>
+                      · 월 정기 할인쿠폰은 5만원 이상 구매 시 사용할 수 있습니다.<br>
+                      · 쿠폰의 사용기한은 지급된 해당 월의 말일까지 입니다.<br>
+                      · 생수,음료,가전 및 일부 입점 상품, 특가 할인 상품 등은 등급별 할인율 및 포인트 적립 대상, 쿠폰 할인 적용 대상에서 제외됩니다.<br>
+                      · 포인트는 상품 구매 시 마다 구매확정 금액을 기준으로 1%(VIP 등급 이상 2%)가 적립됩니다. (일부 상품 제외)<br>
+                      · 적립된 포인트는 상품 구매 시 사용하실 수 있습니다. (구매 금액의 최대 10%)<br>
+                    </div>
+                  </div>
+                  </div>	
+      
+      
+              </div><!--tab1-->
+              
+              <div id="tab2" class="cont">
+                <div class="main-title-1">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">비품넷 신규회원에게 드리는<br>첫 만남 축하 혜택!</div>
+                    <div class="title-4 t-a-c">구매 시 바로 사용이 가능한 혜택을 제공합니다.<br>지금 바로 가입하고 혜택을 받으세요.</div>
+                  </div>
+                  <button type="button" onclick="location.href='https://www.bipum.net/member/join_method.php'" class="button2">지금 가입 후 혜택 받기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-go.svg"></button>
+      
+                </div>
+                <div class="main-title-2">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">신규회원 웰컴 3,000 포인트</div>
+                    <div class="title-4 t-a-c">신규회원 가입 시 자동으로 적립되며 [마이페이지]에서 확인 가능합니다~</div>
+                  </div>
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/coupon_3000won.png">
+                </div>
+                <div class="hr"></div>
+                <div class="main-title-2">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">신규회원 웰컴 10% 쿠폰</div>
+                    <div class="title-4 t-a-c">신규회원 가입 시 자동으로 지급되며 [마이페이지]에서 확인 가능합니다~</div>
+                  </div>
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/coupon_1.png">
+                  <div class="title-6 t-c-g l-h t-a-c">
+                    · 가입일로부터 7일 이내 사용 가능 (미사용 시 소멸)<br>
+                    · 생수, 음료, 일부 가전 및 특가 할인 상품 등은 쿠폰 적용 대상에서 제외
+                  </div>
+                </div>
+              </div><!--tab2-->
+        
+              <div id="tab3" class="cont">
+                <div class="main-title-1">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">비품넷 사업자회원 가입 시<br>제공되는 추가 혜택!</div>
+                    <div class="title-4 t-a-c">구매 시 바로 사용이 가능한 혜택을 제공합니다.<br>지금 바로 가입하고 혜택을 받으세요.</div>
+                  </div>
+                  <button type="button" onclick="location.href='https://www.bipum.net/member/join_method.php'" class="button3">지금 사업자회원 가입 후 혜택 받기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-go.svg"></button>
+                </div>
+                <div class="main-title-2">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">실버회원 등급으로<br>추가 3% 할인율 즉시 적용</div>
+                  </div>
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/b2b_member.png">
+                  <div class="title-6 t-c-g l-h t-a-c">
+                    · 실버회원 등급에 해당되는 혜택을 바로 제공받으실 수 있습니다.<br>
+                    · 회원등급별 할인 혜택 <a href="">바로 확인하기 -></a>
+                  </div>
+                </div>
+                <div class="hr"></div>
+                <div class="main-title-2">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">각종 비품, 소모품, 가전제품, 사무용품 등<br>사업자를 위한 모든 것</div>
+                    <div class="title-4 t-a-c">비즈니스에 필요한 모든 소모품 / 자재 / 서비스<br>사업장에 최적화된 디지털/가전제품<br>객실의 품격과 게스트의 만족도를 높이는 호텔/숙박 용품</div>
+                  </div>
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/b2b_member_1.png">
+                </div>
+                <div class="hr"></div>
+                <div class="b2b_table">
+                  <div class="main-title-2">
+                    <div class="title-2-b t-a-c">사업자 회원만을 위한<br>전용 특가 할인 상품</div>
+                    <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/b2b_member_2.png">
+                  </div>
+                  <div class="main-title-2" style="border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; width:420px;">
+                    <div class="title-2-b t-a-c">세금계산서 발행도<br>간편하게</div>
+                    <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/b2b_member_3.png">
+                  </div>
+                  <div class="main-title-2">
+                    <div class="title-2-b t-a-c">신규오픈/리모델링/대량구매<br>견적 전문 상담</div>
+                    <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/b2b_member_4.png">
+                  </div>
+                </div>
+                <div class="hr"></div>
+                <div class="button_center p-t-60" style="padding-top: 100px;">
+                  <button type="button" onclick="location.href='https://www.bipum.net/board/list.php?bdId=BulkPurchase'" class="button2">대량구매 견적 문의<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-down.svg"></button>
+                </div>
+              </div><!--tab3-->	
+      
+              <div id="tab4" class="cont">
+                <div class="main-title-2">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">카카오 채널 친구 추가 혜택<br>친구 추가 시 5,000원 할인 쿠폰을 드립니다!</div>
+                    <div class="title-4 t-a-c">비품넷 카카오 채널 친구 추가 하셔서 할인쿠폰도 받고<br>신규 상품과 특가 혜택 등 다양한 소식을 가장 먼저 받아보세요.</div>
+                  </div>
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/coupon_5000won.png">
+                  <div class="button_center">
+                    <button type="button" onclick="location.href='https://pf.kakao.com/_BhVkl'" class="button2">카카오 채널 추가<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-down.svg"></button>
+                  </div>
+                  <div class="title-6 t-c-g l-h t-a-c">
+                    · 비품넷 채널 추가시 카카오톡 메시지로 쿠폰 번호가 제공됩니다.<br>
+                    · 비품넷 로그인 후 [마이페이지] - [쿠폰] - [쿠폰등록] 메뉴에서 제공받은 쿠폰 번호를 입력하시면 쿠폰 발급이 완료됩니다.
+                  </div>
+                </div>
+                <div class="hr"></div>  
+                <div class="main-title-2">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">비품넷 앱 설치시<br>2,000원 할인 쿠폰을 드립니다!</div>
+                    <div class="title-4 t-a-c">비품넷 모바일 앱 설치하고 언제 어디서나 간편하게 주문하세요~</div>
+                  </div>
+                  <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/coupon_2000won.png">
+                  <section class="coupon_tip">
+                  <button class="title-4 t-a-c click_tip" style="display: flex; gap: 10px; align-items: center;">자세히 보기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-detail-down.svg" id="arrow_image">
+                  </button>
+                </section>
+                <section class="coupon_tip_detail" id="coupon_detail">
+                  <div class="guide-wrap">
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c t-c-lg">STEP 01</div>
+                        <div class="title-5 t-a-c">비품넷 앱 설치 후 <strong>[로그인]</strong>을 합니다.</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-app-1.png">
+                      </div>
+                    </div>
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c t-c-lg">STEP 02</div>
+                        <div class="title-5 t-a-c">하단 <strong>[설정 버튼]</strong>을 누릅니다.</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-app-2.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guide-wrap">
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c">STEP 03</div>
+                        <div class="title-5 t-a-c"><br><strong>[쿠폰]</strong> 탭 누릅니다.</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-app-3.png">
+                      </div>
+                    </div>
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c">STEP 04</div>
+                        <div class="title-5 t-a-c"><strong>[앱 전용 쿠폰]</strong>을 다운로드 합니다.<br>
+                          쿠폰은 <strong>[마이페이지]</strong>에서 확인 하실 수 있습니다.</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-app-4.png">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+      
+                  <div class="button_center">
+                    <button type="button" onclick="location.href='https://play.google.com/store/apps/details?id=com.app.bipumnet'" class="button2">안드로이드 앱 설치하기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-down.svg"></button><br>
+                    <button type="button" onclick="location.href='http://itunes.apple.com/kr/app/id1541259490?mt=8'" class="button2">아이폰 앱 설치하기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-down.svg"></button>
+                  </div>
+                  <div class="title-6 t-c-g l-h t-a-c">
+                    ※ 비품넷 앱은 모바일 전용 앱으로 휴대폰에서 앱 설치를 진행해주세요.
+                  </div>
+                </div>
+                <div class="hr"></div> 
+                <div class="main-title-2">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">월 100만원 / 200만원 이상 주문 고객<br>추가 할인 쿠폰 증정</div>
+                    <div class="title-4 t-a-c">구매금액이 커질수록 혜택이 커집니다.</div>
+                  </div>
+                  <div class="coupon-by-2">
+                    <div class="coupon-by-1">
+                      <div class="title-5 t-a-c">· 전월 100만원 이상 구매 고객에게 증정</div>
+                      <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/coupon_2.png">
+                    </div>
+                    <div class="coupon-by-1">
+                      <div class="title-5 t-a-c">· 전월 200만원 이상 구매 고객에게 증정</div>
+                      <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/coupon_3.png">
+                    </div>
+                  </div>
+                  <div class="title-6 t-c-g l-h t-a-c">
+                    · 전월 구매실적을 토대로 익월 초에 해당 회원님의 아이디로 지급되며, [마이페이지] 메뉴에서 확인하실 수 있습니다.<br>
+                    · 쿠폰의 사용 기한은 지급된 해당 월의 말일까지 입니다.
+                  </div>
+                </div>
+                <div class="main-title-1">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">이달의 이벤트</div>
+                    <div class="title-4 t-a-c">매월 제공되는 특별 할인 쿠폰! 놓치지 마시고 꼭 활용하세요!</div>
+                  </div>
+                  <button type="button" onclick="location.href='https://www.bipum.net/board/list.php?bdId=event'" class="button2">이벤트 바로가기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-go.svg"></button>
+                </div>
+              </div><!--tab4-->	
+      
+              <div id="tab5" class="cont">
+                <div class="main-title-1">
+                  <div class="txt-wrap">
+                    <div class="title-2-b t-a-c">도매회원 전용 혜택</div>
+                    <div class="title-4 t-a-c">비품넷 도매회원은 인증된 도매 사업자에 한하여 부여되는 회원 등급으로<br>도매회원이 되시면 비품넷 [도매존] 카테고리에서 도매가에 판매하는 상품을<br>온라인으로 주문하실 수 있습니다.</div>
+                    <div class="title-6-b l-h t-a-c">· 사업자등록증 상에 <strong>[업태 : 도매]</strong> 해당 되어야 합니다.</div>
+                  </div>
+                </div>
+                <div class="membership-table">
+                  <div class="main-title-2">
+                    <div class="txt-wrap">
+                      <div class="title-2-b t-a-c">도매 회원 특전</div>
+                      <div class="title-4 t-a-c">
+                        1.비품넷 주요 상품을 도매가에 온라인 간편 주문(도매존 카테고리 내 상품)<br>
+                        2.도매회원 전용 소통 채널을 통해 구매 상담, 상품 정보 제공<br>
+                        3.월 구매 실적에 따라 회원 등급별 <strong>추가 할인율</strong> 적용<br>
+                    </div>
+                  </div>
+                    <div class="table-w-4">
+                      <div class="table-wrap">
+                        <div class="table-4 b-c-b">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">회원등급</div>
+                          </div>
+                        </div>
+                        <div class="table-4 b-c-b">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">도매골드</div>
+                          </div>
+                        </div>
+                        <div class="table-4 b-c-b">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">도매실버</div>
+                          </div>
+                        </div>
+                        <div class="table-4 b-c-b">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">도매일반</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-wrap">
+                        <div class="table-4 b-c-g">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">월 구매금액</div>
+                          </div>
+                        </div>
+                        <div class="table-4">	
+                          <div class="table-cell-4">
+                            <div class="title-4 t-a-c">1,000만원 이상</div>
+                          </div>
+                        </div>
+                        <div class="table-4">	
+                          <div class="table-cell-4">
+                            <div class="title-4 t-a-c">500만원~1,000만원 미만</div>
+                          </div>
+                        </div>
+                        <div class="table-4">	
+                          <div class="table-cell-4">
+                            <div class="title-4 t-a-c">500만원 미만</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-wrap">
+                        <div class="table-4 b-c-g">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">추가 할인율</div>
+                          </div>
+                        </div>
+                        <div class="table-4">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">2% 추가 할인</div>
+                          </div>
+                        </div>
+                        <div class="table-4">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">1% 추가 할인</div>
+                          </div>
+                        </div>
+                        <div class="table-4">	
+                          <div class="table-cell-4">
+                            <div class="title-4-b t-a-c">-</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="title-6 l-h t-a-c t-c-g">
+                      · 인쇄 및 주문 제작 상품은 작업 비용이 추가로 발생할 수 있으며, 협력사를 통해 별도로 배송될 수 있습니다.<br>
+                      · 도매회원은 비품넷 일반 회원에게 제공되는 등급별 할인/적립 적용, 쿠폰 제공 대상에서 제외됩니다. (도매회원 전용 혜택 제공)
+                    </div>
+                  </div>
+                </div>
+                  <div class="hr"></div>
+                  <div class="main-title-2">
+                    <div class="txt-wrap">
+                      <div class="title-2-b t-a-c">도매 회원 인증 절차</div>
+                    </div>
+                    <div class="table-w-7">
+                      <div class="table-wrap">
+                        <div class="table-7">	
+                          <div class="table-cell-7">
+                            <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/wholesale-1.svg">
+                            <div class="title-4-b t-a-c">사업자회원<br>가입</div>
+                          </div>
+                        </div>
+                        <div class="table-7">	
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/wholesale-arrow.svg">
+                        </div>
+                        <div class="table-7">	
+                          <div class="table-cell-7">
+                            <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/wholesale-2.svg">
+                            <div class="title-4-b t-a-c">도매회원<br>이용신청</div>
+                          </div>
+                        </div>
+                        <div class="table-7">	
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/wholesale-arrow.svg">
+                        </div>
+                        <div class="table-7">	
+                          <div class="table-cell-7">
+                            <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/wholesale-3.svg">
+                            <div class="title-4-b t-a-c">도매사업자<br>검토</div>
+                          </div>
+                        </div>
+                        <div class="table-7">	
+                          <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/wholesale-arrow.svg">
+                        </div>
+                        <div class="table-7">	
+                          <div class="table-cell-7">
+                            <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/wholesale-4.svg">
+                            <div class="title-4-b t-a-c">도매회원<br>등급부여</div>
+                          </div>
+                        </div>
+                      </div>		
+                    </div>
+                  </div>
+                
+                  <div class="hr"></div>
+                  <div class="footer-button">
+                    <div class="button_center_2">
+                      <button type="button" onclick="location.href='https://pf.kakao.com/_xdcxaYb'" class="button2">도매전용 이용신청 - 카카오 채널<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-kakao.svg"></button>
+                      <button type="button" onclick="location.href='https://www.bipum.net/goods/goods_list.php?cateCd=022'" class="button2">도매존 바로가기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-go.svg"></button>
+                    </div>
+                    <div class="title-5 l-h t-a-c t-c-g p-t-60">
+                      도매전용 전화문의 031-595-8889
+                    </div>
+                  </div>
+              </div><!--tab5-->
+      
+              <div id="tab6" class="cont">
+                <div class="main-title-2">
+                  <div class="title-2-b t-a-c">더욱 알뜰한 쇼핑을 위한<br>비품넷 쿠폰 사용방법</div>
+                  <div class="txt-wrap">
+                    <div class="title-4 t-a-c t-c-lg">STEP 01</div>
+                    <div class="title-5 t-a-c">상품 페이지 또는 장바구니 페이지에서<br>쿠폰 적용을 원하는 상품 선택 후 <strong>[쿠폰적용]을 클릭</strong>합니다.</div>
+                  </div>
+                  <div class="txt-wrap">
+                    <div class="title-4 t-a-c t-c-lg">STEP 02</div>
+                    <div class="title-5 t-a-c"><strong>사용할 쿠폰을 선택</strong>하면 할인이 적용됩니다.</div>
+                  </div>
+                  <div class="guide-wrap">
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c">PC 상품 페이지</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-coupon-pc-1.png">
+                      </div>
+                    </div>
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c">PC 장바구니 페이지</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-coupon-pc-2.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guide-wrap">
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c">모바일 상품 페이지</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-coupon-mo-1.png">
+                      </div>
+                    </div>
+                    <div class="guide">
+                      <div class="txt-wrap">
+                        <div class="title-4 t-a-c">모바일 장바구니 페이지</div>
+                      </div>
+                      <div class="img-flex">
+                        <img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/guide-coupon-mo-2.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="title-6 l-h t-a-c t-c-g">
+                    ※ 생수, 음료, 일부 가전 및 특가 할인 상품 등은 쿠폰 적용 대상에서 제외됩니다.
+                  </div>
+                </div>
+                <div class="button_center">
+                  <button type="button" onclick="location.href='https://bipum.net/event/couponzone.php'" class="button2">쿠폰존 바로가기<img src="https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-go.svg"></button>
+                </div>
+      
+      
+              </div><!--tab6-->
+      
+            </div><!--tab_content-->
+          </div><!--wrap-->
+        </div><!--membersip-zip-->
+      </div><!--sub_content-->
+      <div><img src="../imgs/bp-footer.png"></div>
+      
+      
+      <script>
+      const tabList = document.querySelectorAll('.tab_menu .list li');
+      const contents = document.querySelectorAll('.tab_content .cont');
+      
+      for(var i = 0; i < tabList.length; i++){
+        tabList[i].querySelector('.btn').addEventListener('click', function(e){
+          e.preventDefault();
+      
+          // 모든 탭에서 is_on 클래스 제거
+          for(var j = 0; j < tabList.length; j++){
+            tabList[j].classList.remove('is_on');
+            contents[j].style.display = 'none'; // 모든 콘텐츠 숨기기
+          }
+      
+          // 클릭한 탭에 is_on 클래스 추가 및 해당 콘텐츠 표시
+          this.parentNode.classList.add('is_on');
+          const target = this.getAttribute('href');
+          document.querySelector(target).style.display = 'block';
+        });
+      }
+      
+      // 초기 설정: 첫 번째 탭(tab1)만 표시
+      contents.forEach((content, index) => {
+        if(index === 0) {
+          content.style.display = 'block'; // 첫 번째 콘텐츠 표시
+        } else {
+          content.style.display = 'none'; // 나머지 콘텐츠 숨기기
+        }
+      });
+      </script>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.querySelector('.click_tip');
+            const arrowImage = document.getElementById('arrow_image');
+            const couponDetail = document.getElementById('coupon_detail');
+        
+            button.addEventListener('click', function() {
+                console.log("Button clicked!");
+        
+                // Toggle the display and opacity
+                if (couponDetail.style.display === 'block') {
+                    couponDetail.style.display = 'none';
+                    couponDetail.style.opacity = '0';
+                    arrowImage.src = 'https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-detail-down.svg';
+                } else {
+                    couponDetail.style.display = 'block';
+                    couponDetail.style.opacity = '1';
+                    arrowImage.src = 'https://yanolja001.godohosting.com/pair/bipumnet/renewal/2023rabbit/pc/membership/svg/button-s-detail-up.svg';
+                }
+        
+                // Log current states for debugging
+                console.log("Current arrow image src:", arrowImage.src);
+                console.log("Coupon detail display:", couponDetail.style.display);
+            });
+        });
+        
+        </script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('.bxslider2').bxSlider({
+            auto: true,
+            mode: 'horizontal',
+            pager:false,
+            controls:false,
+            speed:500,
+            touchEnabled: false,
+            onSliderLoad: function(){
+              $("#bxslider_main").css("visibility", "visible").animate({opacity:1});
+            }
+          });
+        });
+      </script>
+</body>
+</html>
